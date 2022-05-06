@@ -158,6 +158,7 @@ a:active {
 
 header {
   position: absolute;
+  width: 100%;
   font-family: "Oswald", sans-serif;
 }
 header .toggle-btn {
@@ -321,6 +322,9 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   display: block;
   width: 100%;
   letter-spacing: 1px;
+  font-family: Merriweather Sans, sans-serif;
+  font-size: 0.75rem;
+  font-weight: normal;
   padding: 1.25rem 3.125rem;
   transition: color 0.5s;
   border-left: 3px solid transparent;
@@ -332,7 +336,6 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover {
 }
 @media (min-width: 992px) {
   header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
-    font-size: 0.75rem;
     background-color: var(--white-clr);
     padding: 0.625rem;
   }
@@ -383,9 +386,10 @@ header .whatsapp .wa {
 }
 @media (min-width: 992px) {
   header .whatsapp {
-    position: absolute;
-    bottom: -33rem;
-    right: 0.5rem;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 1rem;
+    font-size: 0.875rem;
     font-weight: normal;
     border-radius: 5px;
     color: var(--white-clr);
@@ -407,6 +411,7 @@ header .whatsapp .wa {
 }
 @media (min-width: 992px) {
   .landing {
+    min-height: 100vh;
     background-image: url("../images/landing.png");
   }
 }
@@ -418,8 +423,19 @@ header .whatsapp .wa {
   padding-bottom: 3.125rem;
   text-align: center;
 }
+@media (min-width: 992px) {
+  .contact {
+    background-image: url("../images/contact-bg.png");
+    background-position: top center;
+    background-size: cover;
+    height: 497px;
+    position: relative;
+    top: -115px;
+  }
+}
 .contact h2 {
   position: relative;
+  text-transform: uppercase;
   color: var(--purple-clr);
 }
 .contact p {
