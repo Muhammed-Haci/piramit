@@ -35,24 +35,35 @@ megaMenu.forEach((item) => {
 });
 
 // play video: 
+let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
-let video = document.querySelector(".video video");
 let playing = false;
-
+videoSection
 videoPlayer.addEventListener("click", function () {
-  if (playing === false && video.paused) {
-    video.style.cssText = `display: block;`;
+  if (playing === false) {
+    let video = document.createElement("video");
+    video.setAttribute("autoplay", "true");
+    video.setAttribute("controls", "true");
+    video.setAttribute("playsinline", "true");
+    let source = document.createElement("source");
+    source.setAttribute("src", "../videos/video.mp4");
+    source.setAttribute("type" , "video/mp4");
+    video.appendChild(source);
+    videoSection.appendChild(video);
     video.play();
     playing = true;
   }
 });
-document.addEventListener("click", function (e) {
-  if (e.target !== video && playing === true) {
-    video.style.cssText = `display: none;`;
-    video.pause();
-    playing = false;
-  }
-});
+
+// document.addEventListener("click", function (e) {
+//   if (e.target !== videoPlayer && playing === true) {
+//     video.style.cssText = `display: none;`;
+//     video.remove()
+//     playing = false;
+//   }
+// });
+
+
 
 
 // --------- scroll to the top Function:
