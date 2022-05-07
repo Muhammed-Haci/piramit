@@ -34,7 +34,25 @@ megaMenu.forEach((item) => {
   });
 });
 
+// play video: 
+let videoPlayer = document.querySelector(".video .video-play-icon");
+let video = document.querySelector(".video video");
+let playing = false;
 
+videoPlayer.addEventListener("click", function () {
+  if (playing === false && video.paused) {
+    video.style.cssText = `display: block;`;
+    video.play();
+    playing = true;
+  }
+});
+document.addEventListener("click", function (e) {
+  if (e.target !== video && playing === true) {
+    video.style.cssText = `display: none;`;
+    video.pause();
+    playing = false;
+  }
+});
 
 
 // --------- scroll to the top Function:
