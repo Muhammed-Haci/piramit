@@ -68,9 +68,9 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("overlay")) {
     if (playing === true) {
       document.querySelector(".video .container video").remove();
+      document.querySelector(".overlay").remove();
       playing = false;
     }
-    document.querySelector(".overlay").remove();
   }
 });
 

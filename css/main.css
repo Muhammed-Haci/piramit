@@ -1,25 +1,26 @@
 :root {
-  --testing-clr: #f0f4f5;
-  --primary-clr: #ff9122;
-  --primary-dark-clr: #f09872;
-  --primary-light-clr: #ffb973;
+  --testing-clr: #f2f2f2;
+  --primary-clr: #FF9122;
+  --primary-dark-clr: #F09872;
+  --primary-light-clr: #FFB973;
   --white-clr: #fff;
-  --white-light-clr: #ffffff3b;
+  --white-light-clr: #f2f2f2;
   --white-dark-clr: #ffffffb8;
+  --transparent-white-clr: #ffffff3b;
   --black-clr: #000;
   --black-dark-clr: #222;
-  --black-light-clr: #0000001a;
-  --blue-light-clr: #0059b2;
+  --transparent-black-clr: #0000001a;
+  --blue-light-clr: #0059B2;
   --green-light-clr: #7ec062;
   --orange-light-clr: #fdd365;
-  --green-dark-clr: #128c7e;
+  --green-dark-clr: #128C7E;
   --red-light-clr: #e2494c;
-  --gray-clr: #f0f4f5;
-  --gray-light-clr: #b9b9d9;
+  --gray-clr: #F0F4F5;
+  --gray-light-clr: #B9B9D9;
   --gray-dark-clr: #646573;
-  --purple-clr: #33335d;
+  --purple-clr: #33335D;
   --purple-light-clr: #535362;
-  --purple-dark-clr: #7555b7;
+  --purple-dark-clr: #7555B7;
 }
 
 /* ------------- Project's sections' Table ----------------  
@@ -54,8 +55,8 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
 }
 
 body::-webkit-scrollbar-track {
@@ -151,8 +152,7 @@ a:active {
 
 /* ---------- End Typography Rules -------------*/
 /* ---------- Start header Section -------------*/
-.contact h2,
-.features h2 {
+.contact h2, .features h2 {
   position: relative;
   text-align: center;
   width: -webkit-fit-content;
@@ -162,8 +162,7 @@ a:active {
   text-transform: uppercase;
   color: var(--purple-clr);
 }
-.contact h2::before,
-.features h2::before {
+.contact h2::before, .features h2::before {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -175,23 +174,19 @@ a:active {
   border-radius: 5px;
   background-color: var(--gray-clr);
 }
-.contact h2:hover::before,
-.features h2:hover::before {
+.contact h2:hover::before, .features h2:hover::before {
   width: 100%;
 }
 
-.about-us h2,
-.office h2 {
+.about-us h2, .office h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--purple-clr);
 }
-.about-us h2 span,
-.office h2 span {
+.about-us h2 span, .office h2 span {
   font-weight: normal;
 }
-.about-us h2 img,
-.office h2 img {
+.about-us h2 img, .office h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -231,7 +226,7 @@ header .aside-menu {
   position: fixed;
   top: 0;
   left: -100vw;
-  z-index: 10;
+  z-index: 11;
   min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.5s;
@@ -247,7 +242,7 @@ header .aside-menu::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--white-light-clr);
+  background-color: var(--transparent-white-clr);
 }
 @media (min-width: 992px) {
   header .aside-menu {
@@ -271,7 +266,7 @@ header .aside-menu .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--black-light-clr);
+  border-bottom: 1px solid var(--transparent-black-clr);
   padding: 0.625rem 1.25rem;
 }
 header .aside-menu .header .close-btn {
@@ -280,12 +275,10 @@ header .aside-menu .header .close-btn {
   height: 2rem;
   cursor: pointer;
 }
-header .aside-menu .header .close-btn:hover::after,
-header .aside-menu .header .close-btn:hover::before {
+header .aside-menu .header .close-btn:hover::after, header .aside-menu .header .close-btn:hover::before {
   background-color: var(--red-light-clr);
 }
-header .aside-menu .header .close-btn:before,
-header .aside-menu .header .close-btn:after {
+header .aside-menu .header .close-btn:before, header .aside-menu .header .close-btn:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -424,6 +417,7 @@ header .whatsapp {
   padding: 1.25rem;
 }
 header .whatsapp svg {
+  font-size: 1.25rem;
   padding-right: 0.625rem;
 }
 @media (min-width: 992px) {
@@ -431,7 +425,7 @@ header .whatsapp svg {
     position: fixed;
     bottom: 0.5rem;
     right: 1rem;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: normal;
     padding: 0.625rem;
     border-radius: 5px;
@@ -450,7 +444,7 @@ header .whatsapp svg {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  z-index: 12;
+  z-index: 10;
   background-color: var(--black-clr);
 }
 
@@ -543,7 +537,7 @@ header .whatsapp svg {
   text-align: center;
   padding: 3.125rem 1.25rem;
   border-radius: 10px;
-  border: 1px solid var(--black-light-clr);
+  border: 1px solid var(--transparent-black-clr);
   box-shadow: 0px 0px 20px rgba(152, 152, 152, 0.33);
 }
 .features .features-list .feature-item:hover {
@@ -552,13 +546,12 @@ header .whatsapp svg {
 }
 .features .features-list .feature-item:hover img:first-child {
   -webkit-animation: scale 0.4s ease-in-out alternate;
-  animation: scale 0.4s ease-in-out alternate;
+          animation: scale 0.4s ease-in-out alternate;
 }
 .features .features-list .feature-item:hover img {
   filter: grayscale(0);
 }
-.features .features-list .feature-item:hover h3,
-.features .features-list .feature-item:hover p {
+.features .features-list .feature-item:hover h3, .features .features-list .feature-item:hover p {
   color: var(--white-clr);
 }
 .features .features-list .feature-item img {
@@ -628,8 +621,7 @@ header .whatsapp svg {
   content: "";
   left: 0;
 }
-.video .container .img-holder .video-play-icon:before,
-.video .container .img-holder .video-play-icon::after {
+.video .container .img-holder .video-play-icon:before, .video .container .img-holder .video-play-icon::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -638,12 +630,12 @@ header .whatsapp svg {
   cursor: pointer;
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
-  animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
   background-color: var(--white-light-clr);
 }
 .video .container .img-holder .video-play-icon::after {
   -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .video .container .img-holder svg {
   cursor: pointer;
@@ -694,12 +686,12 @@ header .whatsapp svg {
   display: inline-block;
   transition: 0.5s;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1200px) {
   .video .container .text:hover img {
     -webkit-animation: round 2s ease-in-out alternate;
-    animation: round 2s ease-in-out alternate;
+            animation: round 2s ease-in-out alternate;
   }
 }
 .video .container video {
@@ -708,7 +700,7 @@ header .whatsapp svg {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90%;
-  z-index: 13;
+  z-index: 12;
   border-radius: 5px;
 }
 @media (min-width: 992px) {
@@ -734,13 +726,22 @@ header .whatsapp svg {
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      var(--primary-light-clr),
-      var(--primary-dark-clr)
-    );
+    width: 3px;
+    height: 120%;
+    background: linear-gradient(to bottom, var(--orange-light-clr), var(--orange-light-clr));
+  }
+  .about-us::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--white-clr);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: var(--white-light-clr);
   }
 }
 .about-us .time-line {
@@ -779,7 +780,7 @@ header .whatsapp svg {
 .about-us .time-line .time-line-item .img-holder span {
   font-size: 5.25rem;
   letter-spacing: 3px;
-  color: var(--white-light-clr);
+  color: var(--transparent-white-clr);
 }
 .about-us .time-line .time-line-item > span {
   position: relative;
@@ -880,8 +881,7 @@ header .whatsapp svg {
   border-radius: 5px;
   padding-bottom: 1.25rem;
 }
-.office .gallery .image::before,
-.office .gallery .image::after {
+.office .gallery .image::before, .office .gallery .image::after {
   top: 42%;
   left: 44%;
   transform: translate(-50%, -50%);
@@ -902,8 +902,7 @@ header .whatsapp svg {
   color: var(--orange-light-clr);
   background-color: var(--white-clr);
 }
-.office .gallery .image:hover:before,
-.office .gallery .image:hover::after {
+.office .gallery .image:hover:before, .office .gallery .image:hover::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -912,12 +911,12 @@ header .whatsapp svg {
   cursor: pointer;
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
-  animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
   background-color: var(--white-light-clr);
 }
 .office .gallery .image:hover::after {
   -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .office .gallery .image:hover a {
   opacity: 1;
