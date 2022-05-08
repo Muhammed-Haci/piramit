@@ -631,7 +631,7 @@ header .whatsapp svg {
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
           animation: pulse 3s infinite;
-  background-color: var(--white-light-clr);
+  background-color: var(--transparent-white-clr);
 }
 .video .container .img-holder .video-play-icon::after {
   -webkit-animation-delay: 0.4s;
@@ -912,7 +912,7 @@ header .whatsapp svg {
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
           animation: pulse 3s infinite;
-  background-color: var(--white-light-clr);
+  background-color: var(--transparent-white-clr);
 }
 .office .gallery .image:hover::after {
   -webkit-animation-delay: 0.4s;
