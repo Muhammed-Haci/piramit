@@ -1,13 +1,17 @@
 // Open Close sidebar
-let openMenu = document.querySelector(".toggle-btn");
-let closeMenu = document.querySelector(".close-btn");
+let openBtn = document.querySelector(".toggle-btn");
+let closeBtn = document.querySelector(".close-btn");
 let aside = document.querySelector(".aside-menu");
 
-openMenu.addEventListener("click", function () {
-  aside.style.cssText = `left: 0; box-shadow: 40px 0px 100px black;`;
+openBtn.addEventListener("click", function () {
+  aside.style.cssText = `left: 0;`;
+  let overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
 });
-closeMenu.addEventListener("click", function () {
-  aside.style.cssText = `left: -100vw; box-shadow: none;`;
+closeBtn.addEventListener("click", function () {
+  aside.style.cssText = `left: -100vw;`;
+  document.querySelector(".overlay").remove();
 });
 
 // open close mega-menu:
@@ -18,7 +22,7 @@ let open = false;
 megaMenu.forEach((item) => {
   item.addEventListener("click", function () {
     subNavbar.forEach((item) => {
-      if(item.classList.contains("active")){
+      if (item.classList.contains("active")) {
         item.classList.remove("active");
       }
     });
@@ -34,20 +38,25 @@ megaMenu.forEach((item) => {
   });
 });
 
-// play video: 
+// play video:
 let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
 let playing = false;
-videoSection
+
 videoPlayer.addEventListener("click", function () {
   if (playing === false) {
+    let overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay);
+
     let video = document.createElement("video");
     video.setAttribute("autoplay", "true");
     video.setAttribute("controls", "true");
     video.setAttribute("playsinline", "true");
+
     let source = document.createElement("source");
-    source.setAttribute("src", "../videos/video.mp4");
-    source.setAttribute("type" , "video/mp4");
+    source.setAttribute("src", "videos/video.mp4");
+    source.setAttribute("type", "video/mp4");
     video.appendChild(source);
     videoSection.appendChild(video);
     video.play();
@@ -55,52 +64,15 @@ videoPlayer.addEventListener("click", function () {
   }
 });
 
-// document.addEventListener("click", function (e) {
-//   if (e.target !== videoPlayer && playing === true) {
-//     video.style.cssText = `display: none;`;
-//     video.remove()
-//     playing = false;
-//   }
-// });
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("overlay")) {
+    if (playing === true) {
+      document.querySelector(".video .container video").remove();
+      playing = false;
+    }
+    document.querySelector(".overlay").remove();
+  }
+});
 
 
-
-
-// --------- scroll to the top Function:
-
-// let scrollUp = document.querySelector('.scroll-up');
-
-// window.onscroll = function () {
-//     if (window.scrollY >= 600 ) {
-//       scrollUp.style.display = "block";
-//     }else {
-//       scrollUp.style.display = "none";
-//     }
-// };
-
-// scrollUp.onclick = function () {
-//   window.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth"
-//   })
-// };
-
-// ------- Search field (input) Function:
-
-// let search_icon = document.querySelector('#search-icon');
-// let input = document.querySelector('#search-form');
-// let search = false;
-
-// search_icon.addEventListener("click", function(){
-//   if (search === true) {
-//       input.style.display = "none";
-//       open = false;
-//   } else {
-//       input.style.display = "block";
-//       open = true;
-//   }
-// });
-
-// ------- nav active link function:
 //# sourceMappingURL=main.js.map

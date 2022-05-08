@@ -1,24 +1,25 @@
 :root {
-  --testing-clr: #F0F4F5;
-  --primary-clr: #FF9122;
-  --primary-dark-clr: #F09872;
-  --primary-light-clr: #FFB973;
+  --testing-clr: #f0f4f5;
+  --primary-clr: #ff9122;
+  --primary-dark-clr: #f09872;
+  --primary-light-clr: #ffb973;
   --white-clr: #fff;
   --white-light-clr: #ffffff3b;
+  --white-dark-clr: #ffffffb8;
   --black-clr: #000;
   --black-dark-clr: #222;
   --black-light-clr: #0000001a;
-  --blue-light-clr: #0059B2;
+  --blue-light-clr: #0059b2;
   --green-light-clr: #7ec062;
   --orange-light-clr: #fdd365;
-  --green-dark-clr: #128C7E;
+  --green-dark-clr: #128c7e;
   --red-light-clr: #e2494c;
-  --gray-clr: #F0F4F5;
-  --gray-light-clr: #B9B9D9;
+  --gray-clr: #f0f4f5;
+  --gray-light-clr: #b9b9d9;
   --gray-dark-clr: #646573;
-  --purple-clr: #33335D;
+  --purple-clr: #33335d;
   --purple-light-clr: #535362;
-  --purple-dark-clr: #7555B7;
+  --purple-dark-clr: #7555b7;
 }
 
 /* ------------- Project's sections' Table ----------------  
@@ -150,7 +151,8 @@ a:active {
 
 /* ---------- End Typography Rules -------------*/
 /* ---------- Start header Section -------------*/
-.contact h2, .features h2 {
+.contact h2,
+.features h2 {
   position: relative;
   text-align: center;
   width: -webkit-fit-content;
@@ -160,7 +162,8 @@ a:active {
   text-transform: uppercase;
   color: var(--purple-clr);
 }
-.contact h2::before, .features h2::before {
+.contact h2::before,
+.features h2::before {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -172,19 +175,23 @@ a:active {
   border-radius: 5px;
   background-color: var(--gray-clr);
 }
-.contact h2:hover::before, .features h2:hover::before {
+.contact h2:hover::before,
+.features h2:hover::before {
   width: 100%;
 }
 
-.about-us h2, .office h2 {
+.about-us h2,
+.office h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--purple-clr);
 }
-.about-us h2 span, .office h2 span {
+.about-us h2 span,
+.office h2 span {
   font-weight: normal;
 }
-.about-us h2 img, .office h2 img {
+.about-us h2 img,
+.office h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -226,6 +233,7 @@ header .aside-menu {
   left: -100vw;
   z-index: 10;
   min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.5s;
   width: calc(100vw - 1.5rem);
   max-width: 400px;
@@ -272,10 +280,12 @@ header .aside-menu .header .close-btn {
   height: 2rem;
   cursor: pointer;
 }
-header .aside-menu .header .close-btn:hover::after, header .aside-menu .header .close-btn:hover::before {
+header .aside-menu .header .close-btn:hover::after,
+header .aside-menu .header .close-btn:hover::before {
   background-color: var(--red-light-clr);
 }
-header .aside-menu .header .close-btn:before, header .aside-menu .header .close-btn:after {
+header .aside-menu .header .close-btn:before,
+header .aside-menu .header .close-btn:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -314,18 +324,18 @@ header .aside-menu .navbar .nav-item .nav-link {
   display: block;
   width: 100%;
   cursor: pointer;
-  letter-spacing: 1px;
   padding: 1.25rem;
   transition: color 0.5s;
   color: var(--black-clr);
 }
 header .aside-menu .navbar .nav-item .nav-link:hover {
-  background-color: var(--white-clr);
+  background-color: var(--white-dark-clr);
 }
 @media (min-width: 992px) {
   header .aside-menu .navbar .nav-item .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
     color: var(--white-clr);
-    padding-bottom: 0.625rem;
   }
   header .aside-menu .navbar .nav-item .nav-link:hover {
     background-color: transparent;
@@ -354,9 +364,7 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item {
 header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   display: block;
   width: 100%;
-  letter-spacing: 1px;
-  font-family: Merriweather Sans, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: normal;
   padding: 1.25rem 3.125rem;
   transition: color 0.5s;
@@ -392,17 +400,18 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover {
 }
 header .phone {
   position: relative;
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
   z-index: 2;
+  font-size: 1.125rem;
+  letter-spacing: -1.5px;
+  padding: 1.25rem;
 }
 header .phone svg {
   padding-right: 0.625rem;
 }
 @media (min-width: 992px) {
   header .phone {
+    padding: 0;
     color: var(--white-clr);
-    padding-right: 0;
   }
 }
 header .whatsapp {
@@ -412,9 +421,9 @@ header .whatsapp {
   transition: 0.5s;
   z-index: 2;
   color: var(--green-dark-clr);
-  padding: 0.625rem 1.25rem;
+  padding: 1.25rem;
 }
-header .whatsapp .wa {
+header .whatsapp svg {
   padding-right: 0.625rem;
 }
 @media (min-width: 992px) {
@@ -424,6 +433,7 @@ header .whatsapp .wa {
     right: 1rem;
     font-size: 0.875rem;
     font-weight: normal;
+    padding: 0.625rem;
     border-radius: 5px;
     color: var(--white-clr);
     background-color: var(--green-dark-clr);
@@ -431,6 +441,17 @@ header .whatsapp .wa {
   header .whatsapp:hover {
     background-color: var(--primary-clr);
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 12;
+  background-color: var(--black-clr);
 }
 
 /* End header */
@@ -531,12 +552,13 @@ header .whatsapp .wa {
 }
 .features .features-list .feature-item:hover img:first-child {
   -webkit-animation: scale 0.4s ease-in-out alternate;
-          animation: scale 0.4s ease-in-out alternate;
+  animation: scale 0.4s ease-in-out alternate;
 }
 .features .features-list .feature-item:hover img {
   filter: grayscale(0);
 }
-.features .features-list .feature-item:hover h3, .features .features-list .feature-item:hover p {
+.features .features-list .feature-item:hover h3,
+.features .features-list .feature-item:hover p {
   color: var(--white-clr);
 }
 .features .features-list .feature-item img {
@@ -599,24 +621,29 @@ header .whatsapp .wa {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 3;
   transform: translate(-50%, -50%);
 }
-.video .container .img-holder .video-play-icon:before, .video .container .img-holder .video-play-icon::after {
+.video .container .img-holder .video-play-icon::after {
+  content: "";
+  left: 0;
+}
+.video .container .img-holder .video-play-icon:before,
+.video .container .img-holder .video-play-icon::after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 2px;
   width: 50px;
   height: 50px;
-  z-index: -1;
+  z-index: 1;
+  cursor: pointer;
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
-          animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
   background-color: var(--white-light-clr);
 }
 .video .container .img-holder .video-play-icon::after {
   -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .video .container .img-holder svg {
   cursor: pointer;
@@ -667,25 +694,27 @@ header .whatsapp .wa {
   display: inline-block;
   transition: 0.5s;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 1200px) {
   .video .container .text:hover img {
     -webkit-animation: round 2s ease-in-out alternate;
-            animation: round 2s ease-in-out alternate;
+    animation: round 2s ease-in-out alternate;
   }
 }
 .video .container video {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-height: 280px;
-  max-width: 100%;
-  margin: 0 auto;
-  z-index: 11;
-  border-radius: 10px;
+  max-width: 90%;
+  z-index: 13;
+  border-radius: 5px;
+}
+@media (min-width: 992px) {
+  .video .container video {
+    max-width: 50%;
+  }
 }
 
 /* End Video Section */
@@ -707,7 +736,11 @@ header .whatsapp .wa {
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, var(--primary-light-clr), var(--primary-dark-clr));
+    background: linear-gradient(
+      to bottom,
+      var(--primary-light-clr),
+      var(--primary-dark-clr)
+    );
   }
 }
 .about-us .time-line {
@@ -843,54 +876,57 @@ header .whatsapp .wa {
 }
 .office .gallery .image {
   position: relative;
-  border-radius: 5px;
   overflow: hidden;
+  border-radius: 5px;
   padding-bottom: 1.25rem;
 }
-.office .gallery .image svg {
+.office .gallery .image::before,
+.office .gallery .image::after {
+  top: 42%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+.office .gallery .image a {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
   transform: translate(-50%, -50%);
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
-  padding: 1.25rem;
   border-radius: 50%;
   color: var(--orange-light-clr);
   background-color: var(--white-clr);
 }
-.office .gallery .image:hover svg {
-  -webkit-animation: display 2s ease-in-out infinite alternate;
-          animation: display 2s ease-in-out infinite alternate;
+.office .gallery .image:hover:before,
+.office .gallery .image:hover::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
+  background-color: var(--white-light-clr);
+}
+.office .gallery .image:hover::after {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.office .gallery .image:hover a {
+  opacity: 1;
 }
 
 /* End office section */
 /* Start Footer section */
 /* End Footer section */
 /* Start Animation */
-@-webkit-keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @-webkit-keyframes pulse {
   0% {
     transform: scale(1.3);
@@ -915,6 +951,28 @@ header .whatsapp .wa {
   60% {
     transform: scale(1);
     opacity: 0;
+  }
+}
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @-webkit-keyframes round {
