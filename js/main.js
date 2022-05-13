@@ -75,85 +75,72 @@ document.addEventListener("click", function (e) {
 });
 
 // ------ Slider --------:
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const slideIcons = document.querySelectorAll(".slide-icon");
-const numberOfSlides = slides.length;
-var slideNumber = 0;
+let slider = document.querySelector(".slider");
+let slides = Array.from(document.querySelectorAll(".slide"));
+let prev = document.querySelector(".prev-btn");
+let next = document.querySelector(".next-btn");
+let indicators = Array.from(document.querySelectorAll(".indicators li"));
+let current = 0;
+let slidesCount = slides.length - 1;
 
-//image slider next button
-nextBtn.addEventListener("click", () => {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-  slideIcons.forEach((slideIcon) => {
-    slideIcon.classList.remove("active");
-  });
+// ----------- Remove Active Class function -----------:
+function removeActive() {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  indicators.forEach((indicator) => indicator.classList.remove("active"));
+}
 
-  slideNumber++;
+// ----------- prev button function -----------:
+prev.addEventListener("click", () => {
+  removeActive();
 
-  if (slideNumber > numberOfSlides - 1) {
-    slideNumber = 0;
+  current--;
+
+  if (current < 0) {
+    current = slidesCount;
   }
 
-  slides[slideNumber].classList.add("active");
-  slideIcons[slideNumber].classList.add("active");
+  slides[current].classList.add("active");
+  indicators[current].classList.add("active");
 });
 
-//image slider previous button
-prevBtn.addEventListener("click", () => {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-  slideIcons.forEach((slideIcon) => {
-    slideIcon.classList.remove("active");
-  });
+// ----------- Next button function -----------:
+next.addEventListener("click", () => {
+  removeActive();
 
-  slideNumber--;
+  current++;
 
-  if (slideNumber < 0) {
-    slideNumber = numberOfSlides - 1;
+  if (current > slidesCount) {
+    current = 0;
   }
 
-  slides[slideNumber].classList.add("active");
-  slideIcons[slideNumber].classList.add("active");
+  slides[current].classList.add("active");
+  indicators[current].classList.add("active");
 });
 
-//image slider autoplay
-var playSlider;
+// ------ indicators click function --------:
+indicators.forEach((indicator) => {
+  indicator.addEventListener("click", (e) => {
+    removeActive();
+    current = e.target.dataset.index;
+    slides[current].classList.add("active");
+    indicators[current].classList.add("active");
+  });
+});
 
-var repeater = () => {
-  playSlider = setInterval(function () {
-    slides.forEach((slide) => {
-      slide.classList.remove("active");
-    });
-    slideIcons.forEach((slideIcon) => {
-      slideIcon.classList.remove("active");
-    });
-
-    slideNumber++;
-
-    if (slideNumber > numberOfSlides - 1) {
-      slideNumber = 0;
-    }
-
-    slides[slideNumber].classList.add("active");
-    slideIcons[slideNumber].classList.add("active");
-  }, 4000);
+// ----------- Set autoplay function -----------:
+let clickNext = () => {
+  next.click();
 };
-repeater();
 
-//stop the image slider autoplay on mouseover
+let repeater = setInterval(clickNext, 5000);
+
+// ----------- Stop autoplay on hover function -----------:
 slider.addEventListener("mouseover", () => {
-  clearInterval(playSlider);
+  clearInterval(repeater);
 });
 
-//start the image slider autoplay again on mouseout
+// ----------- Set autoplay on mouse out function -----------:
 slider.addEventListener("mouseout", () => {
-  repeater();
+  repeater = setInterval(clickNext, 5000);
 });
-
-
 //# sourceMappingURL=main.js.map
