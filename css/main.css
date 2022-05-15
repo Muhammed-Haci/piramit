@@ -477,9 +477,9 @@ footer {
 @media (min-width: 992px) {
   footer .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    grid-template-columns: 23% 35% 35%;
+    -moz-column-gap: 7%;
+         column-gap: 7%;
   }
 }
 footer a {
@@ -503,7 +503,9 @@ footer .social-media {
   padding-bottom: 3.125rem;
 }
 footer .social-media p {
-  padding-bottom: 0.625rem;
+  max-width: 265px;
+  padding-top: 0.625rem;
+  padding-bottom: 1.25rem;
 }
 footer .social-media .social-icons {
   display: flex;
@@ -564,6 +566,38 @@ footer .copyright img {
   top: -17px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (min-width: 992px) {
+  footer .contact-info,
+footer .blogs {
+    position: relative;
+  }
+  footer .contact-info::before,
+footer .blogs::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    width: 2px;
+    height: 72%;
+    background-color: var(--black-light-clr);
+  }
+  footer .contact-info::after, footer .blogs::after,
+footer .contact-info div:last-of-type::after, footer .blogs div::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -24px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--black-light-clr);
+  }
+  footer .contact-info div:last-of-type::after,
+footer .blogs div::after {
+    top: unset;
+    bottom: 30px;
+  }
 }
 
 /* End header */
