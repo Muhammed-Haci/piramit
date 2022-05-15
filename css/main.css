@@ -477,9 +477,9 @@ footer {
 @media (min-width: 992px) {
   footer .container {
     display: grid;
-    grid-template-columns: 23% 35% 35%;
-    -moz-column-gap: 7%;
-         column-gap: 7%;
+    grid-template-columns: repeat(3, auto);
+    -moz-column-gap: 3.125rem;
+         column-gap: 3.125rem;
   }
 }
 footer a {
