@@ -28,7 +28,7 @@ megaMenu.forEach((item) => {
     });
     if (open === false) {
       item.nextElementSibling.classList.add("active");
-      item.firstElementChild.style.cssText = `transform: rotate(90deg);`;
+      item.lastElementChild.style.cssText = `transform: rotate(90deg);`;
       open = true;
     } else {
       item.nextElementSibling.classList.remove("active");
@@ -38,7 +38,7 @@ megaMenu.forEach((item) => {
   });
 });
 
-// ------- play video -------:
+// -------------------- play video ----------------------:
 let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
 let playing = false;
@@ -74,7 +74,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// ------ Slider --------:
+//  ----------------- Slider -------------------------:
 let slider = document.querySelector(".slider");
 let slides = Array.from(document.querySelectorAll(".slide"));
 let prev = document.querySelector(".prev-btn");
@@ -83,13 +83,13 @@ let indicators = Array.from(document.querySelectorAll(".indicators li"));
 let current = 0;
 let slidesCount = slides.length - 1;
 
-// ----------- Remove Active Class function -----------:
+//  Remove Active Class function:
 function removeActive() {
   slides.forEach((slide) => slide.classList.remove("active"));
   indicators.forEach((indicator) => indicator.classList.remove("active"));
 }
 
-// ----------- prev button function -----------:
+//  prev button function  :
 prev.addEventListener("click", () => {
   removeActive();
 
@@ -103,7 +103,7 @@ prev.addEventListener("click", () => {
   indicators[current].classList.add("active");
 });
 
-// ----------- Next button function -----------:
+//   Next button function  :
 next.addEventListener("click", () => {
   removeActive();
 
@@ -117,7 +117,7 @@ next.addEventListener("click", () => {
   indicators[current].classList.add("active");
 });
 
-// ------ indicators click function --------:
+//  indicators click function :
 indicators.forEach((indicator) => {
   indicator.addEventListener("click", (e) => {
     removeActive();
@@ -127,19 +127,19 @@ indicators.forEach((indicator) => {
   });
 });
 
-// ----------- Set autoplay function -----------:
+//   Set autoplay function  :
 let clickNext = () => {
   next.click();
 };
 
 let repeater = setInterval(clickNext, 5000);
 
-// ----------- Stop autoplay on hover function -----------:
+//   Stop autoplay on hover function  :
 slider.addEventListener("mouseover", () => {
   clearInterval(repeater);
 });
 
-// ----------- Set autoplay on mouse out function -----------:
+//   Set autoplay on mouse out function  :
 slider.addEventListener("mouseout", () => {
   repeater = setInterval(clickNext, 5000);
 });

@@ -1,5 +1,5 @@
 :root {
-  --testing-clr: #4B5254;
+  --testing-clr: #c5c5cc8a;
   --primary-clr: #FF9122;
   --primary-dark-clr: #F09872;
   --primary-light-clr: #FFB973;
@@ -206,6 +206,7 @@ header .toggle-btn {
   position: absolute;
   top: 3.125rem;
   cursor: pointer;
+  z-index: 4;
 }
 @media (min-width: 992px) {
   header .toggle-btn {
@@ -352,6 +353,7 @@ header .aside-menu .navbar .nav-item .mega-menu {
 header .aside-menu .navbar .nav-item .mega-menu svg {
   font-size: 10px;
   margin-left: 5px;
+  margin-top: 4px;
   transition: 0.5s;
 }
 header .aside-menu .navbar .sub-navbar {
@@ -370,9 +372,9 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   font-size: 0.875rem;
   font-weight: normal;
   text-transform: capitalize;
+  transition: 0.5s;
+  border-left: 3px solid var(--gray-light-clr);
   padding: 1.25rem 3.125rem;
-  transition: color 0.5s;
-  border-left: 3px solid transparent;
   color: var(--black-clr);
 }
 header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover {
@@ -418,6 +420,10 @@ header .phone svg {
     padding: 0;
     color: var(--white-clr);
   }
+}
+header .phone:hover svg {
+  -webkit-animation: his 0.8s ease-in-out alternate;
+          animation: his 0.8s ease-in-out alternate;
 }
 header .whatsapp {
   display: block;
@@ -542,6 +548,7 @@ footer .blogs a span {
   vertical-align: middle;
 }
 footer .copyright {
+  position: relative;
   font-size: 14px;
   text-align: center;
   padding: 1.25rem 0;
@@ -552,10 +559,17 @@ footer .copyright {
     font-size: 16px;
   }
 }
+footer .copyright img {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* End header */
 /* Start Landing Section */
 .landing {
+  position: relative;
   display: block;
   height: 380px;
   background-image: url("../images/mobile-landing.png");
@@ -566,6 +580,18 @@ footer .copyright {
   .landing {
     min-height: 100vh;
     background-image: url("../images/landing.png");
+  }
+}
+.landing img {
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+@media (min-width: 992px) {
+  .landing img {
+    display: block;
   }
 }
 
@@ -889,7 +915,6 @@ footer .copyright {
 .about-us .time-line .time-line-item {
   position: relative !important;
   text-align: center;
-  overflow: hidden;
   box-shadow: 0px 0px 20px rgba(152, 152, 152, 0.33);
   border-radius: 10px 10px 0 0;
 }
@@ -897,6 +922,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   font-weight: 800;
+  overflow: hidden;
   justify-content: space-between;
   padding: 1.25rem 0.625rem;
   border-radius: 10px 10px 0 0;
@@ -956,12 +982,6 @@ footer .copyright {
   bottom: -30px;
 }
 @media (min-width: 992px) {
-  .about-us .time-line .time-line-item:first-of-type,
-.about-us .time-line .time-line-item:nth-of-type(2),
-.about-us .time-line .time-line-item:nth-of-type(3),
-.about-us .time-line .time-line-item:last-of-type {
-    overflow: unset;
-  }
   .about-us .time-line .time-line-item:first-of-type::before,
 .about-us .time-line .time-line-item:nth-of-type(2)::before,
 .about-us .time-line .time-line-item:nth-of-type(3)::before,
@@ -1337,6 +1357,70 @@ footer .copyright {
 /* Start Footer section */
 /* End Footer section */
 /* Start Animation */
+@-webkit-keyframes his {
+  10% {
+    transform: translateX(5px);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(4px);
+  }
+  40% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  70% {
+    transform: translateX(2px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+  10% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes his {
+  10% {
+    transform: translateX(5px);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(4px);
+  }
+  40% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  70% {
+    transform: translateX(2px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+  10% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @-webkit-keyframes pulse {
   0% {
     transform: scale(1.3);
