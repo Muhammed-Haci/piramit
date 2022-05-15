@@ -532,6 +532,9 @@ footer .contact-info div svg {
   font-size: 25px;
   padding-right: 15px;
 }
+footer .contact-info div p {
+  max-width: 430px;
+}
 footer .blogs a {
   display: inline-block;
   min-height: 50px;
@@ -540,7 +543,6 @@ footer .blogs a:not(:last-child) {
   border-bottom: 2px solid var(--black-light-clr);
 }
 footer .blogs a img {
-  display: inline;
   float: left;
   height: 40px;
   width: 65px;
