@@ -1,14 +1,20 @@
-// ------ Open Close sidebar -------:
+// --- create overlay function ---:
+function createOverlay() {
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
+}
+
+// --- Open Close sidebar on mobile devices ---:
 let openBtn = document.querySelector(".toggle-btn");
 let closeBtn = document.querySelector(".close-btn");
 let aside = document.querySelector(".aside-menu");
 
-openBtn.addEventListener("click", function () {
+openBtn.addEventListener("click", () => {
   aside.style.cssText = `left: 0;`;
-  let overlay = document.createElement("div");
-  overlay.classList.add("overlay");
-  document.body.appendChild(overlay);
+  createOverlay();
 });
+
 closeBtn.addEventListener("click", function () {
   aside.style.cssText = `left: -100vw;`;
   document.querySelector(".overlay").remove();
@@ -38,16 +44,14 @@ megaMenu.forEach((item) => {
   });
 });
 
-// -------------------- play video ----------------------:
+// --- play the video ---:
 let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
 let playing = false;
 
 videoPlayer.addEventListener("click", function () {
   if (playing === false) {
-    let overlay = document.createElement("div");
-    overlay.classList.add("overlay");
-    document.body.appendChild(overlay);
+    createOverlay();
 
     let video = document.createElement("video");
     video.setAttribute("autoplay", "true");
@@ -63,7 +67,7 @@ videoPlayer.addEventListener("click", function () {
     playing = true;
   }
 });
-
+// --- close the video ---:
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("overlay")) {
     if (playing === true) {
@@ -74,7 +78,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-//  ----------------- Slider -------------------------:
+//  --- Slider ---:
 let slider = document.querySelector(".slider");
 let slides = Array.from(document.querySelectorAll(".slide"));
 let prev = document.querySelector(".prev-btn");
