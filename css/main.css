@@ -357,6 +357,9 @@ header .aside-menu .navbar .nav-item .nav-link {
 header .aside-menu .navbar .nav-item .nav-link:hover {
   background-color: var(--transparent-white-clr-1);
 }
+header .aside-menu .navbar .nav-item .nav-link.active {
+  text-decoration: underline;
+}
 @media (min-width: 992px) {
   header .aside-menu .navbar .nav-item .nav-link {
     padding-top: 0;
@@ -399,9 +402,9 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   padding: 1.25rem 3.125rem;
   color: var(--black-clr);
 }
-header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover {
-  border-left-color: var(--primary-clr);
+header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover, header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link.active {
   color: var(--primary-clr);
+  border-left-color: var(--primary-clr);
   background-color: var(--linen-clr);
 }
 @media (min-width: 992px) {
@@ -1264,12 +1267,15 @@ header .whatsapp svg {
 }
 .offer > img {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -6px;
 }
 
 /* End offer Section */
 /* Start Footer section */
 footer {
+  position: relative;
   padding-top: 1.25rem;
   color: var(--davys-grey-clr);
   background-color: var(--eerie-black-clr);

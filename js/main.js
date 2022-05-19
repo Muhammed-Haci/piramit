@@ -44,6 +44,29 @@ megaMenu.forEach((item) => {
   });
 });
 
+// --- remove class function ---:
+function removeActiveClass(e) {
+  e.forEach((item) => item.classList.remove("active"));
+}
+
+// --- Add active class to the navbar links ---:
+let navLinks = document.querySelectorAll(".navbar .nav-link");
+let SubNavLinks = document.querySelectorAll(".navbar .sub-nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    removeActiveClass(navLinks);
+    this.classList.add("active");
+  });
+});
+
+SubNavLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    removeActiveClass(SubNavLinks);
+    this.classList.add("active");
+  });
+});
+
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
