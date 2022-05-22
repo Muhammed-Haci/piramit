@@ -101,6 +101,43 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// --- Add animation to the p element ---:
+let video = document.querySelector(".video ");
+let image = document.querySelector(".video img");
+
+window.addEventListener("scroll", function () {
+  if (window.innerWidth > 1199) {
+    if (window.scrollY >= video.offsetTop - 100) {
+      image.style.cssText = `animation: round 2s ease-in-out alternate;`;
+    } else {
+      image.style.cssText = `animation: unset;`;
+    }
+  }
+});
+
+// --- Add animation to the titles elements ---:
+let contact = document.querySelector(".contact");
+let h1 = document.querySelector(".contact h1");
+
+let services = document.querySelector(".services");
+let h2 = document.querySelector(".services h2");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= contact.offsetTop - 250) {
+    h1.style.setProperty("--before-width", "100%");
+  } else {
+    h1.style.setProperty("--before-width", "50px");
+  }
+});
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= services.offsetTop - 250) {
+      h2.style.setProperty("--before-width", "100%");
+    } else {
+      h2.style.setProperty("--before-width", "50px");
+    }
+});
+
 //  --- Slider ---:
 let slider = document.querySelector(".slider");
 let slides = Array.from(document.querySelectorAll(".slide"));

@@ -184,14 +184,11 @@ a:visited {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
+  width: var(--before-width, 50px);
   height: 5px;
   transition: 0.5s;
   border-radius: 5px;
   background-color: var(--cultured-clr-1);
-}
-.contact h1:hover::before, .services h2:hover::before {
-  width: 100%;
 }
 
 .about-us h2, .office h2, .our-work h2 {
@@ -354,17 +351,18 @@ header .aside-menu .navbar .nav-item .nav-link {
   transition: color 0.5s;
   color: var(--black-clr);
 }
-header .aside-menu .navbar .nav-item .nav-link:hover {
+header .aside-menu .navbar .nav-item .nav-link:hover, header .aside-menu .navbar .nav-item .nav-link.active, header .aside-menu .navbar .nav-item .nav-link:focus {
   background-color: var(--transparent-white-clr-1);
-}
-header .aside-menu .navbar .nav-item .nav-link.active {
-  text-decoration: underline;
 }
 @media (min-width: 992px) {
   header .aside-menu .navbar .nav-item .nav-link {
     padding-top: 0;
     padding-bottom: 0;
     color: var(--white-clr);
+  }
+  header .aside-menu .navbar .nav-item .nav-link.active {
+    text-decoration: underline;
+    background-color: transparent !important;
   }
   header .aside-menu .navbar .nav-item .nav-link:hover {
     background-color: transparent;
@@ -744,12 +742,6 @@ header .whatsapp svg {
   transition: 0.5s;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media (min-width: 1200px) {
-  .video .container .text:hover img {
-    -webkit-animation: round 2s ease-in-out alternate;
-            animation: round 2s ease-in-out alternate;
-  }
 }
 .video .container video {
   position: fixed;
