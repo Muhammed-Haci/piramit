@@ -67,6 +67,7 @@ SubNavLinks.forEach((link) => {
   });
 });
 
+
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");
 let videoPlayer = document.querySelector(".video .video-play-icon");
