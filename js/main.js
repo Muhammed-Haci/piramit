@@ -67,6 +67,20 @@ SubNavLinks.forEach((link) => {
   });
 });
 
+// --- Toggle dark light mood ---:
+let themeIcon = document.querySelector("#theme-swicher .icon");
+let input = document.querySelector("#checkbox");
+
+themeIcon.addEventListener("click", function () {
+  if (input.checked) {
+    console.log("icon clicked");
+    document.styleSheets[2].cssRules[0].style.cssText = `--white-clr: #292b2e;`;
+  } else {
+    console.log("icon not clicked");
+    document.styleSheets[2].cssRules[0].style.cssText = `--white-clr: #fff;`;
+  }
+});
+
 
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");

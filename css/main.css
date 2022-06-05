@@ -3,6 +3,7 @@
   --white-clr: #fff;
   --linen-clr: #FFF5EB;
   --cultured-clr: #f2f2f2;
+  --gainsboro-clr: #d8d9db;
   --cultured-clr-1: #F0F4F5;
   --transparent-white-clr-1: #ffffffb8;
   --wild-blue-yonder-clr: #B9B9D9;
@@ -32,6 +33,93 @@
   --transparent-white-clr: #ffffff3b;
 }
 
+/* prefer color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white-clr: #292b2e;
+    --independence-clr: #cdcfd2;
+    --independence-clr-1: #e3796a;
+    --black-coral-clr: #e2e3e7;
+    --wild-blue-yonder-clr: #e2e3e7;
+    --primary-dark-clr: #86786b;
+    --space-cadet-clr: #84a0ef;
+    --denim-clr: #082D53;
+    --mantis-clr: #537c42;
+    --orange-yellow-crayola-clr: #997e36;
+    --royal-purple-clr: #382958;
+    --cultured-clr-1: #6D6054;
+  }
+
+  #theme-swicher .fa-sun {
+    display: none;
+  }
+
+  .landing {
+    background-image: url("../images/mobile-landing-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing {
+    background-image: url("../images/landing-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .contact {
+    background-image: url("../images/contact-bg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .video {
+    background-image: url("../images/video-bg-dark.png") !important;
+  }
+  .video .question {
+    filter: invert(0.8);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .office .curly-bg:first-child {
+    background-image: url("../images/curly-bg-1-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .office .curly-bg:last-child {
+    background-image: url("../images/curly-bg-2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .initiatives {
+    background-image: url("../images/initiatives-bg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .about-us .time-line .time-line-item > span {
+    color: #d8d9db;
+    background-color: #3c3636 !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .about-us .container > a {
+    border-color: #42434b !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .offer > img.light-bg {
+    display: none !important;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --white-clr: #eee;
+  }
+
+  #theme-swicher .fa-moon {
+    display: none;
+  }
+
+  .offer > img.dark-bg {
+    display: none;
+  }
+}
 /* --- End Project's colors --- */
 /* --- Project's sections' Table --- 
 
@@ -133,6 +221,7 @@ ul {
 body {
   line-height: 1.5;
   font-family: "open Sans", sans-serif;
+  background-color: var(--white-clr);
 }
 
 h1,
@@ -238,7 +327,7 @@ header .toggle-btn span {
   height: 0.125rem;
   width: 1.375rem;
   transition: 0.5s;
-  background-color: var(--white-clr);
+  background-color: var(--gainsboro-clr);
 }
 header .toggle-btn span:not(:last-child) {
   margin-bottom: 0.3125rem;
@@ -359,7 +448,7 @@ header .aside-menu .navbar .nav-item .nav-link:hover, header .aside-menu .navbar
   header .aside-menu .navbar .nav-item .nav-link {
     padding-top: 0;
     padding-bottom: 0;
-    color: var(--white-clr);
+    color: var(--gainsboro-clr);
   }
   header .aside-menu .navbar .nav-item .nav-link.active {
     text-decoration: underline;
@@ -408,7 +497,7 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover, header
 }
 @media (min-width: 992px) {
   header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
-    background-color: var(--white-clr);
+    background-color: var(--gainsboro-clr);
     padding: 0.625rem;
   }
 }
@@ -426,8 +515,27 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover, header
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-bottom-color: var(--white-clr);
+    border-bottom-color: var(--gainsboro-clr);
   }
+}
+header #theme-swicher {
+  z-index: 2;
+  padding: 3px 2px 2px 6px;
+  border-radius: 5px;
+  background-color: #00000091;
+}
+header #theme-swicher .fa-sun {
+  cursor: pointer;
+  color: #dfa620;
+}
+header #theme-swicher .fa-moon {
+  cursor: pointer;
+  color: #dfa620;
+}
+header #theme-swicher input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 header .phone {
   position: relative;
@@ -443,7 +551,7 @@ header .phone svg {
   header .phone {
     font-size: 1rem;
     padding: 0;
-    color: var(--white-clr);
+    color: var(--gainsboro-clr);
   }
 }
 header .phone:hover svg {
@@ -474,7 +582,7 @@ header .whatsapp svg {
     font-weight: normal;
     padding: 0.625rem;
     border-radius: 5px;
-    color: var(--white-clr);
+    color: var(--gainsboro-clr);
     background-color: var(--celadon-green-clr);
   }
   header .whatsapp:hover {
