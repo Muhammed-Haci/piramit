@@ -1,10 +1,13 @@
+@charset "UTF-8";
 /* --- Start Project's colors --- */
 :root {
+  --nav-clr: #fff;
   --white-clr: #fff;
   --linen-clr: #FFF5EB;
   --cultured-clr: #f2f2f2;
   --gainsboro-clr: #d8d9db;
   --cultured-clr-1: #F0F4F5;
+  --manatee-clr: #A5A5B7;
   --transparent-white-clr-1: #ffffffb8;
   --wild-blue-yonder-clr: #B9B9D9;
   --primary-clr: #FF9122;
@@ -36,6 +39,7 @@
 /* prefer color scheme */
 @media (prefers-color-scheme: dark) {
   :root {
+    --nav-clr: #cacaca;
     --white-clr: #292b2e;
     --independence-clr: #cdcfd2;
     --independence-clr-1: #e3796a;
@@ -50,17 +54,28 @@
     --cultured-clr-1: #6D6054;
   }
 
-  #theme-swicher .fa-sun {
-    display: none;
-  }
-
-  .landing {
+  .landing.home {
     background-image: url("../images/mobile-landing-dark.png") !important;
   }
 }
 @media (prefers-color-scheme: dark) and (min-width: 992px) {
-  .landing {
+  .landing.home {
     background-image: url("../images/landing-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .landing.webtasarim {
+    background-image: url("../images/webtasarim-landing-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.webtasarim {
+    background-image: url("../images/webtasarim-bg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  img.light {
+    display: none !important;
   }
 }
 @media (prefers-color-scheme: dark) and (min-width: 992px) {
@@ -108,16 +123,12 @@
   }
 }
 @media (prefers-color-scheme: light) {
-  :root {
-    --white-clr: #eee;
-  }
-
-  #theme-swicher .fa-moon {
-    display: none;
-  }
-
   .offer > img.dark-bg {
     display: none;
+  }
+
+  img.dark {
+    display: none !important;
   }
 }
 /* --- End Project's colors --- */
@@ -281,15 +292,24 @@ a:visited {
   background-color: var(--silver-clr);
 }
 
-.about-us h2, .office h2, .our-work h2 {
+.about-us h2,
+.office h2,
+.our-work h2,
+.webtasarim h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--space-cadet-clr);
 }
-.about-us h2 span, .office h2 span, .our-work h2 span {
+.about-us h2 span,
+.office h2 span,
+.our-work h2 span,
+.webtasarim h2 span {
   font-weight: normal;
 }
-.about-us h2 img, .office h2 img, .our-work h2 img {
+.about-us h2 img,
+.office h2 img,
+.our-work h2 img,
+.webtasarim h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -448,7 +468,7 @@ header .aside-menu .navbar .nav-item .nav-link:hover, header .aside-menu .navbar
   header .aside-menu .navbar .nav-item .nav-link {
     padding-top: 0;
     padding-bottom: 0;
-    color: var(--gainsboro-clr);
+    color: var(--nav-clr);
   }
   header .aside-menu .navbar .nav-item .nav-link.active {
     text-decoration: underline;
@@ -551,7 +571,7 @@ header .phone svg {
   header .phone {
     font-size: 1rem;
     padding: 0;
-    color: var(--gainsboro-clr);
+    color: var(--nav-clr);
   }
 }
 header .phone:hover svg {
@@ -591,19 +611,25 @@ header .whatsapp svg {
 }
 
 /* End header */
+/* comment rules Css content*/
+img.the-end-bg {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+}
+
 /* Start Landing Section */
 .landing {
   position: relative;
   display: block;
   height: 380px;
-  background-image: url("../images/mobile-landing.png");
   background-size: cover;
   background-position: top center;
 }
 @media (min-width: 992px) {
   .landing {
     min-height: 100vh;
-    background-image: url("../images/landing.png");
   }
 }
 .landing img {
@@ -616,6 +642,38 @@ header .whatsapp svg {
 @media (min-width: 992px) {
   .landing img {
     display: block;
+  }
+}
+
+.landing.home {
+  background-image: url("../images/mobile-landing.png");
+}
+@media (min-width: 992px) {
+  .landing.home {
+    background-image: url("../images/landing.png");
+  }
+}
+.landing.home img {
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+@media (min-width: 992px) {
+  .landing.home img {
+    display: block;
+  }
+}
+
+.landing.webtasarim {
+  min-height: 965px;
+  background-image: url("../images/webtasarim-landing.png");
+}
+@media (min-width: 992px) {
+  .landing.webtasarim {
+    min-height: 644px;
+    background-image: url("../images/webtasarim-bg.png");
   }
 }
 
@@ -1366,14 +1424,127 @@ header .whatsapp svg {
     font-size: 1.25rem;
   }
 }
-.offer > img {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -6px;
-}
 
 /* End offer Section */
+/*********************************
+Web Tasarmın sayfasının başlangıcı
+**********************************/
+/* Start section one*/
+.webtasarim > h2 {
+  margin-top: 1.25rem;
+}
+.webtasarim .adanawebtasarim,
+.webtasarim .tasarimNedir,
+.webtasarim .question,
+.webtasarim .contact-us {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+@media (min-width: 992px) {
+  .webtasarim .adanawebtasarim .container,
+.webtasarim .tasarimNedir .container,
+.webtasarim .question .container,
+.webtasarim .contact-us .container {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+}
+.webtasarim .adanawebtasarim img,
+.webtasarim .tasarimNedir img,
+.webtasarim .question img,
+.webtasarim .contact-us img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 275px;
+}
+.webtasarim .adanawebtasarim img.right,
+.webtasarim .tasarimNedir img.right,
+.webtasarim .question img.right,
+.webtasarim .contact-us img.right {
+  order: 2;
+}
+.webtasarim .adanawebtasarim .content,
+.webtasarim .tasarimNedir .content,
+.webtasarim .question .content,
+.webtasarim .contact-us .content {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .webtasarim .adanawebtasarim .content,
+.webtasarim .tasarimNedir .content,
+.webtasarim .question .content,
+.webtasarim .contact-us .content {
+    text-align: start;
+  }
+}
+.webtasarim .adanawebtasarim h3,
+.webtasarim .tasarimNedir h3,
+.webtasarim .question h3,
+.webtasarim .contact-us h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+  color: var(--independence-clr);
+}
+.webtasarim .adanawebtasarim p,
+.webtasarim .tasarimNedir p,
+.webtasarim .question p,
+.webtasarim .contact-us p {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--manatee-clr);
+}
+.webtasarim .adanawebtasarim p span,
+.webtasarim .tasarimNedir p span,
+.webtasarim .question p span,
+.webtasarim .contact-us p span {
+  font-size: 22px;
+  color: var(--black-coral-clr);
+}
+.webtasarim .essays .container {
+  margin: 3.125rem auto;
+}
+.webtasarim .essays .container h3 {
+  color: var(--orange-yellow-crayola-clr);
+}
+.webtasarim .question h3 {
+  font-size: 18px;
+}
+.webtasarim .question .text {
+  margin-bottom: 1.25rem;
+}
+.webtasarim .contact-us p {
+  margin-top: 1.25rem;
+  line-height: 2;
+  font-weight: bold;
+  color: var(--manatee-clr);
+}
+@media (min-width: 992px) {
+  .webtasarim .contact-us p {
+    font-size: 20px;
+  }
+}
+.webtasarim .contact-info {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+.webtasarim .contact-info h3 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: var(--independence-clr);
+}
+@media (min-width: 992px) {
+  .webtasarim .contact-info h3 {
+    font-size: 25px;
+  }
+}
+
+/* End section one*/
 /* Start Footer section */
 footer {
   position: relative;

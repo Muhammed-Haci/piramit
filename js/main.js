@@ -72,14 +72,21 @@ let themeIcon = document.querySelector("#theme-swicher .icon");
 let input = document.querySelector("#checkbox");
 
 themeIcon.addEventListener("click", function () {
-  if (input.checked) {
-    console.log("icon clicked");
-    document.styleSheets[2].cssRules[0].style.cssText = `--white-clr: #292b2e;`;
-  } else {
-    console.log("icon not clicked");
-    document.styleSheets[2].cssRules[0].style.cssText = `--white-clr: #fff;`;
+  themeIcon.classList.toggle("fa-moon");
+  themeIcon.classList.toggle("fa-sun");
+
+  if (input.checked === true) {
+    console.log("checkbox unchecked");
+    document.styleSheets[2].cssRules[0].style.setProperty("--white-clr", "#292b2e");
+  } 
+  if (input.checked === false) {
+    console.log("checkbox checked");
+    document.styleSheets[2].cssRules[0].style.setProperty("--white-clr", "#fff");
   }
 });
+
+
+
 
 
 // --- play the video ---:
