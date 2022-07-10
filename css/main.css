@@ -6,6 +6,7 @@
   --linen-clr: #FFF5EB;
   --cultured-clr: #f2f2f2;
   --gainsboro-clr: #d8d9db;
+  --gainsboro-clr: #e2e3e7;
   --cultured-clr-1: #F0F4F5;
   --manatee-clr: #A5A5B7;
   --transparent-white-clr-1: #ffffffb8;
@@ -52,6 +53,11 @@
     --orange-yellow-crayola-clr: #997e36;
     --royal-purple-clr: #382958;
     --cultured-clr-1: #6D6054;
+    --onyx-clr: var(--manatee-clr);
+  }
+
+  img.dark {
+    filter: brightness(75%);
   }
 
   .landing.home {
@@ -74,8 +80,13 @@
   }
 }
 @media (prefers-color-scheme: dark) {
-  img.light {
-    display: none !important;
+  .landing.webyazilim {
+    background-image: url("../images/webyazilimbg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.webyazilim {
+    background-image: url("../images/webyazilim-dark.png") !important;
   }
 }
 @media (prefers-color-scheme: dark) and (min-width: 992px) {
@@ -115,20 +126,6 @@
 @media (prefers-color-scheme: dark) {
   .about-us .container > a {
     border-color: #42434b !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .offer > img.light-bg {
-    display: none !important;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .offer > img.dark-bg {
-    display: none;
-  }
-
-  img.dark {
-    display: none !important;
   }
 }
 /* --- End Project's colors --- */
@@ -220,6 +217,7 @@ video {
 
 img {
   height: auto;
+  max-height: 100%;
   max-width: 100%;
 }
 
@@ -295,7 +293,8 @@ a:visited {
 .about-us h2,
 .office h2,
 .our-work h2,
-.webtasarim h2 {
+.webtasarim h2,
+.webyazilim h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--space-cadet-clr);
@@ -303,13 +302,15 @@ a:visited {
 .about-us h2 span,
 .office h2 span,
 .our-work h2 span,
-.webtasarim h2 span {
+.webtasarim h2 span,
+.webyazilim h2 span {
   font-weight: normal;
 }
 .about-us h2 img,
 .office h2 img,
 .our-work h2 img,
-.webtasarim h2 img {
+.webtasarim h2 img,
+.webyazilim h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -611,7 +612,7 @@ header .whatsapp svg {
 }
 
 /* End header */
-/* comment rules Css content*/
+/* comment rules in Css content*/
 img.the-end-bg {
   position: relative;
   left: 50%;
@@ -630,18 +631,6 @@ img.the-end-bg {
 @media (min-width: 992px) {
   .landing {
     min-height: 100vh;
-  }
-}
-.landing img {
-  display: none;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-}
-@media (min-width: 992px) {
-  .landing img {
-    display: block;
   }
 }
 
@@ -675,6 +664,50 @@ img.the-end-bg {
     min-height: 644px;
     background-image: url("../images/webtasarim-bg.png");
   }
+}
+
+.landing.webyazilim {
+  min-height: 965px;
+  background-image: url("../images/webyazilimbg.png");
+}
+@media (min-width: 992px) {
+  .landing.webyazilim {
+    min-height: 644px;
+    background-image: url("../images/webyazilim.png");
+  }
+}
+.landing.webyazilim .container {
+  position: relative;
+}
+.landing.webyazilim .box {
+  position: absolute;
+  text-align: center;
+  bottom: -780px;
+  left: 0;
+  padding: 0 20px;
+}
+@media (min-width: 992px) {
+  .landing.webyazilim .box {
+    top: 196px;
+    max-width: 460px;
+  }
+}
+@media (min-width: 1200px) {
+  .landing.webyazilim .box {
+    max-width: 580px;
+  }
+}
+.landing.webyazilim .box h1 {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--black-coral-clr);
+}
+.landing.webyazilim .box img {
+  filter: brightness(30%);
+}
+.landing.webyazilim .box p {
+  padding-top: 1.25rem;
+  color: var(--black-coral-clr);
 }
 
 /* End Landing Section */
@@ -1545,6 +1578,58 @@ Web Tasarmın sayfasının başlangıcı
 }
 
 /* End section one*/
+/*********************************
+Web Yazılım sayfasının başlangıcı
+**********************************/
+.webyazilim h2 {
+  margin-top: 1.25rem;
+}
+.webyazilim h3 {
+  margin-bottom: 1.25rem;
+  font-size: 24px;
+  color: var(--independence-clr);
+  font-weight: 600;
+}
+.webyazilim p {
+  font-size: 14px;
+  color: var(--onyx-clr);
+  line-height: 2;
+}
+.webyazilim img.wide {
+  width: 100%;
+  margin: 1.25rem auto;
+}
+.webyazilim img.right {
+  order: 2;
+}
+.webyazilim .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.125rem;
+  row-gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .webyazilim .content {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.webyazilim .content img {
+  max-width: 300px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .webyazilim .content img {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .webyazilim .content img {
+    height: 250px;
+  }
+}
+
 /* Start Footer section */
 footer {
   position: relative;

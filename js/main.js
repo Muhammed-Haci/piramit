@@ -77,17 +77,13 @@ themeIcon.addEventListener("click", function () {
 
   if (input.checked === true) {
     console.log("checkbox unchecked");
-    document.styleSheets[2].cssRules[0].style.setProperty("--white-clr", "#292b2e");
+    document.styleSheets[1].cssRules[0].style.setProperty("--white-clr", "#292b2e");
   } 
   if (input.checked === false) {
     console.log("checkbox checked");
-    document.styleSheets[2].cssRules[0].style.setProperty("--white-clr", "#fff");
+    document.styleSheets[1].cssRules[0].style.setProperty("--white-clr", "#fff");
   }
 });
-
-
-
-
 
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");
