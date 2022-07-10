@@ -89,6 +89,56 @@
     background-image: url("../images/webyazilim-dark.png") !important;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .landing.eticaret {
+    background-image: url("../images/eticaretbg2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.eticaret {
+    background-image: url("../images/eticaretbg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .landing.markatescil {
+    background-image: url("../images/markatescilbg2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.markatescil {
+    background-image: url("../images/markatescilbg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .landing.sanaltur {
+    background-image: url("../images/sanalturbg2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.sanaltur {
+    background-image: url("../images/sanalturbg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .landing.onlinecrm {
+    background-image: url("../images/crmbg2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.onlinecrm {
+    background-image: url("../images/crmbg-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .landing.sosyalmedya {
+    background-image: url("../images/sosyalmedyabg2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.sosyalmedya {
+    background-image: url("../images/sosyalmedyabg-dark.png") !important;
+  }
+}
 @media (prefers-color-scheme: dark) and (min-width: 992px) {
   .contact {
     background-image: url("../images/contact-bg-dark.png") !important;
@@ -294,7 +344,12 @@ a:visited {
 .office h2,
 .our-work h2,
 .webtasarim h2,
-.webyazilim h2 {
+.webyazilim h2,
+.eticaret h2,
+.markatescil h2,
+.sanaltur h2,
+.onlinecrm h2,
+.sosyalmedya h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--space-cadet-clr);
@@ -303,14 +358,24 @@ a:visited {
 .office h2 span,
 .our-work h2 span,
 .webtasarim h2 span,
-.webyazilim h2 span {
+.webyazilim h2 span,
+.eticaret h2 span,
+.markatescil h2 span,
+.sanaltur h2 span,
+.onlinecrm h2 span,
+.sosyalmedya h2 span {
   font-weight: normal;
 }
 .about-us h2 img,
 .office h2 img,
 .our-work h2 img,
 .webtasarim h2 img,
-.webyazilim h2 img {
+.webyazilim h2 img,
+.eticaret h2 img,
+.markatescil h2 img,
+.sanaltur h2 img,
+.onlinecrm h2 img,
+.sosyalmedya h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -667,19 +732,104 @@ img.the-end-bg {
 }
 
 .landing.webyazilim {
-  min-height: 965px;
   background-image: url("../images/webyazilimbg.png");
 }
 @media (min-width: 992px) {
   .landing.webyazilim {
-    min-height: 644px;
     background-image: url("../images/webyazilim.png");
   }
 }
-.landing.webyazilim .container {
+
+.landing.eticaret {
+  min-height: 965px;
+  background-image: url("../images/eticaretbg2.png");
+}
+@media (min-width: 992px) {
+  .landing.eticaret {
+    min-height: 644px;
+    background-image: url("../images/eticaretbg.png");
+  }
+}
+.landing.eticaret .box {
+  left: unset !important;
+  right: 0;
+}
+
+.landing.markatescil {
+  background-image: url("../images/markatescilbg2.png");
+}
+@media (min-width: 992px) {
+  .landing.markatescil {
+    background-image: url("../images/markatescilbg.png");
+  }
+  .landing.markatescil .box {
+    top: 250px !important;
+  }
+}
+
+.landing.sanaltur {
+  background-image: url("../images/sanalturbg2.png");
+}
+@media (min-width: 992px) {
+  .landing.sanaltur {
+    background-image: url("../images/sanalturbg.png");
+  }
+  .landing.sanaltur .box {
+    left: unset !important;
+    right: 0;
+  }
+}
+
+.landing.onlinecrm {
+  background-image: url("../images/crmbg2.png");
+}
+@media (min-width: 992px) {
+  .landing.onlinecrm {
+    background-image: url("../images/crmbg.png");
+  }
+}
+
+.landing.sosyalmedya {
+  background-image: url("../images/sosyalmedyabg2.png");
+}
+@media (min-width: 992px) {
+  .landing.sosyalmedya {
+    background-image: url("../images/sosyalmedyabg.png");
+  }
+}
+
+.landing.webyazilim,
+.landing.eticaret,
+.landing.markatescil,
+.landing.sanaltur,
+.landing.onlinecrm,
+.landing.sosyalmedya {
+  min-height: 965px;
+}
+@media (min-width: 992px) {
+  .landing.webyazilim,
+.landing.eticaret,
+.landing.markatescil,
+.landing.sanaltur,
+.landing.onlinecrm,
+.landing.sosyalmedya {
+    min-height: 644px;
+  }
+}
+.landing.webyazilim .container,
+.landing.eticaret .container,
+.landing.markatescil .container,
+.landing.sanaltur .container,
+.landing.onlinecrm .container,
+.landing.sosyalmedya .container {
   position: relative;
 }
-.landing.webyazilim .box {
+.landing.webyazilim .box,
+.landing.eticaret .box,
+.landing.markatescil .box,
+.landing.sanaltur .box,
+.landing.onlinecrm .box,
+.landing.sosyalmedya .box {
   position: absolute;
   text-align: center;
   bottom: -780px;
@@ -687,25 +837,50 @@ img.the-end-bg {
   padding: 0 20px;
 }
 @media (min-width: 992px) {
-  .landing.webyazilim .box {
+  .landing.webyazilim .box,
+.landing.eticaret .box,
+.landing.markatescil .box,
+.landing.sanaltur .box,
+.landing.onlinecrm .box,
+.landing.sosyalmedya .box {
     top: 196px;
     max-width: 460px;
   }
 }
 @media (min-width: 1200px) {
-  .landing.webyazilim .box {
+  .landing.webyazilim .box,
+.landing.eticaret .box,
+.landing.markatescil .box,
+.landing.sanaltur .box,
+.landing.onlinecrm .box,
+.landing.sosyalmedya .box {
     max-width: 580px;
   }
 }
-.landing.webyazilim .box h1 {
+.landing.webyazilim .box h1,
+.landing.eticaret .box h1,
+.landing.markatescil .box h1,
+.landing.sanaltur .box h1,
+.landing.onlinecrm .box h1,
+.landing.sosyalmedya .box h1 {
   text-transform: capitalize;
   font-weight: 500;
   color: var(--black-coral-clr);
 }
-.landing.webyazilim .box img {
+.landing.webyazilim .box img,
+.landing.eticaret .box img,
+.landing.markatescil .box img,
+.landing.sanaltur .box img,
+.landing.onlinecrm .box img,
+.landing.sosyalmedya .box img {
   filter: brightness(30%);
 }
-.landing.webyazilim .box p {
+.landing.webyazilim .box p,
+.landing.eticaret .box p,
+.landing.markatescil .box p,
+.landing.sanaltur .box p,
+.landing.onlinecrm .box p,
+.landing.sosyalmedya .box p {
   padding-top: 1.25rem;
   color: var(--black-coral-clr);
 }
