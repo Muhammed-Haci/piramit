@@ -142,6 +142,16 @@
     background-image: url("../images/sosyalmedyabg-dark.png") !important;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .landing.nedenpiramit {
+    background-image: url("../images/nedenbiz2-dark.png") !important;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
+  .landing.nedenpiramit {
+    background-image: url("../images/nedenbiz-dark.png") !important;
+  }
+}
 @media (prefers-color-scheme: dark) and (min-width: 992px) {
   .contact {
     background-image: url("../images/contact-bg-dark.png") !important;
@@ -353,7 +363,9 @@ a:visited {
 .sanaltur h2,
 .onlinecrm h2,
 .sosyalmedya h2,
-.referanslar h2 {
+.referanslar h2,
+.hakkimizda h2,
+.nedenpiramit h2 {
   text-align: center;
   text-transform: uppercase;
   color: var(--space-cadet-clr);
@@ -368,7 +380,9 @@ a:visited {
 .sanaltur h2 span,
 .onlinecrm h2 span,
 .sosyalmedya h2 span,
-.referanslar h2 span {
+.referanslar h2 span,
+.hakkimizda h2 span,
+.nedenpiramit h2 span {
   font-weight: normal;
 }
 .about-us h2 img,
@@ -381,7 +395,9 @@ a:visited {
 .sanaltur h2 img,
 .onlinecrm h2 img,
 .sosyalmedya h2 img,
-.referanslar h2 img {
+.referanslar h2 img,
+.hakkimizda h2 img,
+.nedenpiramit h2 img {
   display: block;
   margin: 5px auto;
 }
@@ -694,7 +710,9 @@ header .whatsapp svg {
 .sanaltur h2,
 .onlinecrm h2,
 .sosyalmedya h2,
-.referanslar h2 {
+.referanslar h2,
+.hakkimizda h2,
+.nedenpiramit h2 {
   margin-top: 1.25rem;
 }
 .about-us h2.capital,
@@ -707,7 +725,9 @@ header .whatsapp svg {
 .sanaltur h2.capital,
 .onlinecrm h2.capital,
 .sosyalmedya h2.capital,
-.referanslar h2.capital {
+.referanslar h2.capital,
+.hakkimizda h2.capital,
+.nedenpiramit h2.capital {
   text-transform: capitalize;
 }
 
@@ -840,13 +860,41 @@ img.the-end-bg {
   }
 }
 
+.landing.hakkimizda {
+  background-image: url("../images/hakkimizdabg2.png");
+}
+.landing.hakkimizda .box {
+  bottom: -925px;
+}
+@media (min-width: 992px) {
+  .landing.hakkimizda {
+    background-image: url("../images/hakkimizdabg.png");
+  }
+  .landing.hakkimizda .box {
+    left: unset !important;
+    right: 0;
+    top: 250px !important;
+  }
+}
+
+.landing.nedenpiramit {
+  background-image: url("../images/nedenbiz2.png");
+}
+@media (min-width: 992px) {
+  .landing.nedenpiramit {
+    background-image: url("../images/nedenbiz.png");
+  }
+}
+
 .landing.webyazilim,
 .landing.eticaret,
 .landing.markatescil,
 .landing.sanaltur,
 .landing.onlinecrm,
 .landing.sosyalmedya,
-.landing.referanslar {
+.landing.referanslar,
+.landing.hakkimizda,
+.nedenpiramit {
   min-height: 965px;
 }
 @media (min-width: 992px) {
@@ -856,7 +904,9 @@ img.the-end-bg {
 .landing.sanaltur,
 .landing.onlinecrm,
 .landing.sosyalmedya,
-.landing.referanslar {
+.landing.referanslar,
+.landing.hakkimizda,
+.nedenpiramit {
     min-height: 644px;
   }
 }
@@ -866,7 +916,9 @@ img.the-end-bg {
 .landing.sanaltur .container,
 .landing.onlinecrm .container,
 .landing.sosyalmedya .container,
-.landing.referanslar .container {
+.landing.referanslar .container,
+.landing.hakkimizda .container,
+.nedenpiramit .container {
   position: relative;
 }
 .landing.webyazilim .box,
@@ -875,7 +927,9 @@ img.the-end-bg {
 .landing.sanaltur .box,
 .landing.onlinecrm .box,
 .landing.sosyalmedya .box,
-.landing.referanslar .box {
+.landing.referanslar .box,
+.landing.hakkimizda .box,
+.nedenpiramit .box {
   position: absolute;
   text-align: center;
   bottom: -780px;
@@ -889,7 +943,9 @@ img.the-end-bg {
 .landing.sanaltur .box,
 .landing.onlinecrm .box,
 .landing.sosyalmedya .box,
-.landing.referanslar .box {
+.landing.referanslar .box,
+.landing.hakkimizda .box,
+.nedenpiramit .box {
     top: 196px;
     max-width: 460px;
   }
@@ -901,7 +957,9 @@ img.the-end-bg {
 .landing.sanaltur .box,
 .landing.onlinecrm .box,
 .landing.sosyalmedya .box,
-.landing.referanslar .box {
+.landing.referanslar .box,
+.landing.hakkimizda .box,
+.nedenpiramit .box {
     max-width: 580px;
   }
 }
@@ -911,7 +969,9 @@ img.the-end-bg {
 .landing.sanaltur .box h1,
 .landing.onlinecrm .box h1,
 .landing.sosyalmedya .box h1,
-.landing.referanslar .box h1 {
+.landing.referanslar .box h1,
+.landing.hakkimizda .box h1,
+.nedenpiramit .box h1 {
   text-transform: capitalize;
   font-weight: 500;
   color: var(--black-coral-clr);
@@ -922,7 +982,9 @@ img.the-end-bg {
 .landing.sanaltur .box img,
 .landing.onlinecrm .box img,
 .landing.sosyalmedya .box img,
-.landing.referanslar .box img {
+.landing.referanslar .box img,
+.landing.hakkimizda .box img,
+.nedenpiramit .box img {
   filter: brightness(30%);
 }
 .landing.webyazilim .box p,
@@ -931,7 +993,9 @@ img.the-end-bg {
 .landing.sanaltur .box p,
 .landing.onlinecrm .box p,
 .landing.sosyalmedya .box p,
-.landing.referanslar .box p {
+.landing.referanslar .box p,
+.landing.hakkimizda .box p,
+.nedenpiramit .box p {
   padding-top: 1.25rem;
   color: var(--black-coral-clr);
 }
@@ -1812,7 +1876,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil h3,
 .sanaltur h3,
 .onlinecrm h3,
-.sosyalmedya h3 {
+.sosyalmedya h3,
+.hakkimizda h3,
+.nedenpiramit h3 {
   margin-bottom: 1.25rem;
   font-size: 24px;
   color: var(--independence-clr);
@@ -1823,7 +1889,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil p,
 .sanaltur p,
 .onlinecrm p,
-.sosyalmedya p {
+.sosyalmedya p,
+.hakkimizda p,
+.nedenpiramit p {
   font-size: 14px;
   color: var(--onyx-clr);
   line-height: 2;
@@ -1833,7 +1901,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil img.wide,
 .sanaltur img.wide,
 .onlinecrm img.wide,
-.sosyalmedya img.wide {
+.sosyalmedya img.wide,
+.hakkimizda img.wide,
+.nedenpiramit img.wide {
   width: 100%;
   margin: 1.25rem auto;
 }
@@ -1843,7 +1913,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil img.right,
 .sanaltur img.right,
 .onlinecrm img.right,
-.sosyalmedya img.right {
+.sosyalmedya img.right,
+.hakkimizda img.right,
+.nedenpiramit img.right {
     order: 2;
   }
 }
@@ -1852,7 +1924,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil .content,
 .sanaltur .content,
 .onlinecrm .content,
-.sosyalmedya .content {
+.sosyalmedya .content,
+.hakkimizda .content,
+.nedenpiramit .content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1865,7 +1939,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil .content,
 .sanaltur .content,
 .onlinecrm .content,
-.sosyalmedya .content {
+.sosyalmedya .content,
+.hakkimizda .content,
+.nedenpiramit .content {
     flex-direction: row;
     gap: 20px;
   }
@@ -1875,7 +1951,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil .content img,
 .sanaltur .content img,
 .onlinecrm .content img,
-.sosyalmedya .content img {
+.sosyalmedya .content img,
+.hakkimizda .content img,
+.nedenpiramit .content img {
   max-width: 300px;
 }
 @media (min-width: 768px) {
@@ -1884,7 +1962,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil .content img,
 .sanaltur .content img,
 .onlinecrm .content img,
-.sosyalmedya .content img {
+.sosyalmedya .content img,
+.hakkimizda .content img,
+.nedenpiramit .content img {
     height: 300px;
   }
 }
@@ -1894,7 +1974,9 @@ Web Yazılım sayfasının başlangıcı
 .markatescil .content img,
 .sanaltur .content img,
 .onlinecrm .content img,
-.sosyalmedya .content img {
+.sosyalmedya .content img,
+.hakkimizda .content img,
+.nedenpiramit .content img {
     height: 250px;
   }
 }
