@@ -692,6 +692,18 @@ header .whatsapp svg {
 .sosyalmedya h2 {
   margin-top: 1.25rem;
 }
+.about-us h2.capital,
+.office h2.capital,
+.our-work h2.capital,
+.webtasarim h2.capital,
+.webyazilim h2.capital,
+.eticaret h2.capital,
+.markatescil h2.capital,
+.sanaltur h2.capital,
+.onlinecrm h2.capital,
+.sosyalmedya h2.capital {
+  text-transform: capitalize;
+}
 
 img.the-end-bg {
   position: relative;
@@ -1773,7 +1785,10 @@ Web Yazılım sayfasının başlangıcı
 **********************************/
 .webyazilim h3,
 .eticaret h3,
-.markatescil h3 {
+.markatescil h3,
+.sanaltur h3,
+.onlinecrm h3,
+.sosyalmedya h3 {
   margin-bottom: 1.25rem;
   font-size: 24px;
   color: var(--independence-clr);
@@ -1781,25 +1796,39 @@ Web Yazılım sayfasının başlangıcı
 }
 .webyazilim p,
 .eticaret p,
-.markatescil p {
+.markatescil p,
+.sanaltur p,
+.onlinecrm p,
+.sosyalmedya p {
   font-size: 14px;
   color: var(--onyx-clr);
   line-height: 2;
 }
 .webyazilim img.wide,
 .eticaret img.wide,
-.markatescil img.wide {
+.markatescil img.wide,
+.sanaltur img.wide,
+.onlinecrm img.wide,
+.sosyalmedya img.wide {
   width: 100%;
   margin: 1.25rem auto;
 }
-.webyazilim img.right,
+@media (min-width: 992px) {
+  .webyazilim img.right,
 .eticaret img.right,
-.markatescil img.right {
-  order: 2;
+.markatescil img.right,
+.sanaltur img.right,
+.onlinecrm img.right,
+.sosyalmedya img.right {
+    order: 2;
+  }
 }
 .webyazilim .content,
 .eticaret .content,
-.markatescil .content {
+.markatescil .content,
+.sanaltur .content,
+.onlinecrm .content,
+.sosyalmedya .content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1809,28 +1838,39 @@ Web Yazılım sayfasının başlangıcı
 @media (min-width: 768px) {
   .webyazilim .content,
 .eticaret .content,
-.markatescil .content {
+.markatescil .content,
+.sanaltur .content,
+.onlinecrm .content,
+.sosyalmedya .content {
     flex-direction: row;
     gap: 20px;
   }
 }
 .webyazilim .content img,
 .eticaret .content img,
-.markatescil .content img {
+.markatescil .content img,
+.sanaltur .content img,
+.onlinecrm .content img,
+.sosyalmedya .content img {
   max-width: 300px;
-  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .webyazilim .content img,
 .eticaret .content img,
-.markatescil .content img {
+.markatescil .content img,
+.sanaltur .content img,
+.onlinecrm .content img,
+.sosyalmedya .content img {
     height: 300px;
   }
 }
 @media (min-width: 992px) {
   .webyazilim .content img,
 .eticaret .content img,
-.markatescil .content img {
+.markatescil .content img,
+.sanaltur .content img,
+.onlinecrm .content img,
+.sosyalmedya .content img {
     height: 250px;
   }
 }
@@ -1838,6 +1878,21 @@ Web Yazılım sayfasının başlangıcı
 /*********************************
 E-Ticaret sayfasının başlangıcı
 **********************************/
+.line {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.line img {
+  height: unset !important;
+}
+@media (min-width: 992px) {
+  .line img {
+    margin-left: 3.125rem;
+  }
+}
+
 /* Start Footer section */
 footer {
   position: relative;
