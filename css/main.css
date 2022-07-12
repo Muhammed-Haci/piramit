@@ -716,8 +716,9 @@ header .whatsapp {
   font-weight: bold;
   transition: 0.5s;
   z-index: 2;
-  color: var(--celadon-green-clr);
+  color: var(--nav-clr);
   padding: 0.625rem;
+  background-color: var(--celadon-green-clr);
 }
 header .whatsapp svg {
   position: relative;
@@ -735,7 +736,6 @@ header .whatsapp svg {
     padding: 0.625rem;
     border-radius: 5px;
     color: var(--gainsboro-clr);
-    background-color: var(--celadon-green-clr);
   }
   header .whatsapp:hover {
     background-color: var(--primary-clr);
