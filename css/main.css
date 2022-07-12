@@ -232,14 +232,12 @@ B. On phone devices:
 A. On laptop devices:
 >> fix the landing images in all the pages!
 >> currect the color in the slider title and "devami"
->> currect the color in the footer title
 >> 
 
 B. On phone devices:
 >> 
 >> 
 >> 
-
 
 
 <--> 2. The blog page
@@ -367,6 +365,18 @@ a:visited {
 
 /* --- End Typography Rules ---*/
 /* --- Start grouping Elements ---*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+  background-color: var(--black-clr);
+}
+
 .contact h1, .services h2 {
   position: relative;
   text-align: center;
@@ -437,18 +447,6 @@ a:visited {
 .nedenpiramit h2 img {
   display: block;
   margin: 5px auto;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: 10;
-  cursor: pointer;
-  background-color: var(--black-clr);
 }
 
 header {
@@ -743,7 +741,7 @@ header .whatsapp svg {
 }
 
 /* End header */
-/* comment rules in Css content*/
+/* comment Styles in Css content */
 .about-us h2,
 .office h2,
 .our-work h2,
@@ -785,18 +783,19 @@ img.the-end-bg {
 /* Start Landing Section */
 .landing {
   position: relative;
-  display: block;
-  height: 380px;
+  min-height: 965px;
   background-size: cover;
   background-position: top center;
 }
 @media (min-width: 992px) {
   .landing {
-    min-height: 100vh;
+    min-height: 644px !important;
   }
 }
 
 .landing.home {
+  height: 380px;
+  min-height: unset;
   background-image: url("../images/mobile-landing.png");
 }
 @media (min-width: 992px) {
@@ -805,25 +804,17 @@ img.the-end-bg {
   }
 }
 .landing.home img {
-  display: none;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -55%);
 }
-@media (min-width: 992px) {
-  .landing.home img {
-    display: block;
-  }
-}
 
 .landing.webtasarim {
-  min-height: 965px;
   background-image: url("../images/webtasarim-landing.png");
 }
 @media (min-width: 992px) {
   .landing.webtasarim {
-    min-height: 644px;
     background-image: url("../images/webtasarim-bg.png");
   }
 }
@@ -838,12 +829,10 @@ img.the-end-bg {
 }
 
 .landing.eticaret {
-  min-height: 965px;
   background-image: url("../images/eticaretbg2.png");
 }
 @media (min-width: 992px) {
   .landing.eticaret {
-    min-height: 644px;
     background-image: url("../images/eticaretbg.png");
   }
 }
@@ -930,30 +919,6 @@ img.the-end-bg {
   }
 }
 
-.landing.webyazilim,
-.landing.eticaret,
-.landing.markatescil,
-.landing.sanaltur,
-.landing.onlinecrm,
-.landing.sosyalmedya,
-.landing.referanslar,
-.landing.hakkimizda,
-.nedenpiramit {
-  min-height: 965px;
-}
-@media (min-width: 992px) {
-  .landing.webyazilim,
-.landing.eticaret,
-.landing.markatescil,
-.landing.sanaltur,
-.landing.onlinecrm,
-.landing.sosyalmedya,
-.landing.referanslar,
-.landing.hakkimizda,
-.nedenpiramit {
-    min-height: 644px;
-  }
-}
 .landing.webyazilim .container,
 .landing.eticaret .container,
 .landing.markatescil .container,
@@ -962,7 +927,7 @@ img.the-end-bg {
 .landing.sosyalmedya .container,
 .landing.referanslar .container,
 .landing.hakkimizda .container,
-.nedenpiramit .container {
+.landing.nedenpiramit .container {
   position: relative;
 }
 .landing.webyazilim .box,
@@ -973,7 +938,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box,
 .landing.referanslar .box,
 .landing.hakkimizda .box,
-.nedenpiramit .box {
+.landing.nedenpiramit .box {
   position: absolute;
   text-align: center;
   bottom: -780px;
@@ -989,7 +954,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box,
 .landing.referanslar .box,
 .landing.hakkimizda .box,
-.nedenpiramit .box {
+.landing.nedenpiramit .box {
     top: 196px;
     max-width: 460px;
   }
@@ -1003,7 +968,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box,
 .landing.referanslar .box,
 .landing.hakkimizda .box,
-.nedenpiramit .box {
+.landing.nedenpiramit .box {
     max-width: 580px;
   }
 }
@@ -1015,7 +980,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box h1,
 .landing.referanslar .box h1,
 .landing.hakkimizda .box h1,
-.nedenpiramit .box h1 {
+.landing.nedenpiramit .box h1 {
   text-transform: capitalize;
   font-weight: 500;
   color: var(--black-coral-clr);
@@ -1028,7 +993,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box img,
 .landing.referanslar .box img,
 .landing.hakkimizda .box img,
-.nedenpiramit .box img {
+.landing.nedenpiramit .box img {
   filter: brightness(30%);
 }
 .landing.webyazilim .box p,
@@ -1039,7 +1004,7 @@ img.the-end-bg {
 .landing.sosyalmedya .box p,
 .landing.referanslar .box p,
 .landing.hakkimizda .box p,
-.nedenpiramit .box p {
+.landing.nedenpiramit .box p {
   padding-top: 1.25rem;
   color: var(--black-coral-clr);
 }
@@ -1812,9 +1777,6 @@ img.the-end-bg {
 Web Tasarmın sayfasının başlangıcı
 **********************************/
 /* Start section one*/
-.webtasarim > h2 {
-  margin-top: 1.25rem;
-}
 .webtasarim .adanawebtasarim,
 .webtasarim .tasarimNedir,
 .webtasarim .question,
@@ -1841,12 +1803,6 @@ Web Tasarmın sayfasının başlangıcı
   height: 100%;
   margin: 0 auto;
   max-width: 275px;
-}
-.webtasarim .adanawebtasarim img.right,
-.webtasarim .tasarimNedir img.right,
-.webtasarim .question img.right,
-.webtasarim .contact-us img.right {
-  order: 2;
 }
 .webtasarim .adanawebtasarim .content,
 .webtasarim .tasarimNedir .content,
@@ -1928,7 +1884,7 @@ Web Tasarmın sayfasının başlangıcı
 
 /* End section one*/
 /*********************************
-Web Yazılım sayfasının başlangıcı
+Hizmetlerimizin sayfalarının başlangıcı
 **********************************/
 .webyazilim h3,
 .eticaret h3,
