@@ -9,7 +9,7 @@
   --gainsboro-clr: #d8d9db;
   --gainsboro-clr: #e2e3e7;
   --cultured-clr-1: #F0F4F5;
-  --manatee-clr: #A5A5B7;
+  --manatee-clr: #333;
   --transparent-white-clr-1: #ffffffb8;
   --wild-blue-yonder-clr: #B9B9D9;
   --primary-clr: #FF9122;
@@ -57,6 +57,8 @@
     --royal-purple-clr: #382958;
     --cultured-clr-1: #6D6054;
     --onyx-clr: var(--manatee-clr);
+    --manatee-clr: #adadad;
+    --ghost-white-clr: #616161;
   }
 
   img.dark {
@@ -741,6 +743,11 @@ header .whatsapp svg {
 }
 
 /* End header */
+a.center {
+  display: block;
+  text-align: center;
+}
+
 /* comment Styles in Css content */
 .about-us h2,
 .office h2,
@@ -844,6 +851,9 @@ img.the-end-bg {
 .landing.markatescil {
   background-image: url("../images/markatescilbg2.png");
 }
+.landing.markatescil .box {
+  bottom: -845px !important;
+}
 @media (min-width: 992px) {
   .landing.markatescil {
     background-image: url("../images/markatescilbg.png");
@@ -855,6 +865,9 @@ img.the-end-bg {
 
 .landing.sanaltur {
   background-image: url("../images/sanalturbg2.png");
+}
+.landing.sanaltur .box {
+  bottom: -800px !important;
 }
 @media (min-width: 992px) {
   .landing.sanaltur {
@@ -869,18 +882,30 @@ img.the-end-bg {
 .landing.onlinecrm {
   background-image: url("../images/crmbg2.png");
 }
+.landing.onlinecrm .box {
+  bottom: -850px !important;
+}
 @media (min-width: 992px) {
   .landing.onlinecrm {
     background-image: url("../images/crmbg.png");
+  }
+  .landing.onlinecrm .box {
+    top: 260px !important;
   }
 }
 
 .landing.sosyalmedya {
   background-image: url("../images/sosyalmedyabg2.png");
 }
+.landing.sosyalmedya .box {
+  bottom: -800px !important;
+}
 @media (min-width: 992px) {
   .landing.sosyalmedya {
     background-image: url("../images/sosyalmedyabg.png");
+  }
+  .landing.sosyalmedya .box {
+    top: 270px !important;
   }
 }
 
@@ -897,7 +922,7 @@ img.the-end-bg {
   background-image: url("../images/hakkimizdabg2.png");
 }
 .landing.hakkimizda .box {
-  bottom: -925px;
+  bottom: -830px !important;
 }
 @media (min-width: 992px) {
   .landing.hakkimizda {
@@ -1804,6 +1829,14 @@ Web Tasarmın sayfasının başlangıcı
   margin: 0 auto;
   max-width: 275px;
 }
+@media (min-width: 992px) {
+  .webtasarim .adanawebtasarim img.right,
+.webtasarim .tasarimNedir img.right,
+.webtasarim .question img.right,
+.webtasarim .contact-us img.right {
+    order: 2 !important;
+  }
+}
 .webtasarim .adanawebtasarim .content,
 .webtasarim .tasarimNedir .content,
 .webtasarim .question .content,
@@ -1899,6 +1932,28 @@ Hizmetlerimizin sayfalarının başlangıcı
   color: var(--independence-clr);
   font-weight: 600;
 }
+@media (min-width: 992px) {
+  .webyazilim h3.ml,
+.eticaret h3.ml,
+.markatescil h3.ml,
+.sanaltur h3.ml,
+.onlinecrm h3.ml,
+.sosyalmedya h3.ml,
+.hakkimizda h3.ml,
+.nedenpiramit h3.ml {
+    margin-left: 3.125rem;
+  }
+}
+.webyazilim h3.orange,
+.eticaret h3.orange,
+.markatescil h3.orange,
+.sanaltur h3.orange,
+.onlinecrm h3.orange,
+.sosyalmedya h3.orange,
+.hakkimizda h3.orange,
+.nedenpiramit h3.orange {
+  color: var(--orange-yellow-crayola-clr);
+}
 .webyazilim p,
 .eticaret p,
 .markatescil p,
@@ -1931,7 +1986,7 @@ Hizmetlerimizin sayfalarının başlangıcı
 .sosyalmedya img.right,
 .hakkimizda img.right,
 .nedenpiramit img.right {
-    order: 2;
+    order: 2 !important;
   }
 }
 .webyazilim .content,
