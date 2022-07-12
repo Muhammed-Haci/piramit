@@ -20,29 +20,29 @@ closeBtn.addEventListener("click", function () {
   document.querySelector(".overlay").remove();
 });
 
-// ------ open close mega-menu --------:
-let subNavbar = document.querySelectorAll(".sub-navbar");
-let megaMenu = document.querySelectorAll(".mega-menu");
-let open = false;
+// // ------ open close mega-menu --------:
+// let subNavbar = document.querySelectorAll(".sub-navbar");
+// let megaMenu = document.querySelectorAll(".mega-menu");
+// let open = false;
 
-megaMenu.forEach((item) => {
-  item.addEventListener("click", function () {
-    subNavbar.forEach((item) => {
-      if (item.classList.contains("active")) {
-        item.classList.remove("active");
-      }
-    });
-    if (open === false) {
-      item.nextElementSibling.classList.add("active");
-      item.lastElementChild.style.cssText = `transform: rotate(90deg);`;
-      open = true;
-    } else {
-      item.nextElementSibling.classList.remove("active");
-      item.firstElementChild.style.cssText = `transform: rotate(0deg);`;
-      open = false;
-    }
-  });
-});
+// megaMenu.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     subNavbar.forEach((item) => {
+//       if (item.classList.contains("active")) {
+//         item.classList.remove("active");
+//       }
+//     });
+//     if (open === false) {
+//       item.nextElementSibling.classList.add("active");
+//       item.lastElementChild.style.cssText = `transform: rotate(90deg);`;
+//       open = true;
+//     } else {
+//       item.nextElementSibling.classList.remove("active");
+//       item.firstElementChild.style.cssText = `transform: rotate(0deg);`;
+//       open = false;
+//     }
+//   });
+// });
 
 // --- remove class function ---:
 function removeActiveClass(e) {
@@ -70,20 +70,80 @@ SubNavLinks.forEach((link) => {
 // --- Toggle dark light mood ---:
 let themeIcon = document.querySelector("#theme-swicher .icon");
 let input = document.querySelector("#checkbox");
+let sunIcon = document.querySelector("#checkbox fa-sun");
+let moonIcon = document.querySelector("#checkbox fa-moon");
+
 
 themeIcon.addEventListener("click", function () {
-  themeIcon.classList.toggle("fa-moon");
-  themeIcon.classList.toggle("fa-sun");
+
 
   if (input.checked === true) {
-    console.log("checkbox unchecked");
-    document.styleSheets[1].cssRules[0].style.setProperty("--white-clr", "#292b2e");
+    console.log("unchecked");
+    // sunIcon.style.cssText = `display: none;`;
+    // moonIcon.style.cssText = `display: block;`;
+    document.styleSheets[1].cssRules[1].style.setProperty("--white-clr", "#fff");
+    document.styleSheets[1].cssRules[1].style.setProperty("--nav-clr", "#fff");
+    document.styleSheets[1].cssRules[1].style.setProperty("--independence-clr", "#535362");
+    document.styleSheets[1].cssRules[1].style.setProperty("--independence-clr-1", "#343C54");
+    document.styleSheets[1].cssRules[1].style.setProperty("--black-coral-clr", "#646573");
+    document.styleSheets[1].cssRules[1].style.setProperty("--wild-blue-yonder-clr", "#B9B9D9");
+    document.styleSheets[1].cssRules[1].style.setProperty("--primary-dark-clr", "#F09872");
+    document.styleSheets[1].cssRules[1].style.setProperty("--space-cadet-clr", "#33335D");
+    document.styleSheets[1].cssRules[1].style.setProperty("--denim-clr", "#0059B2");
+    document.styleSheets[1].cssRules[1].style.setProperty("--mantis-clr", "#7ec062");
+    document.styleSheets[1].cssRules[1].style.setProperty("--orange-yellow-crayola-clr", "#fdd365");
+    document.styleSheets[1].cssRules[1].style.setProperty("--royal-purple-clr", "#7555B7");
+    document.styleSheets[1].cssRules[1].style.setProperty("--cultured-clr-1", "#F0F4F5");
+    document.styleSheets[1].cssRules[1].style.setProperty("--onyx-clr", "#33383A");
+
+
+
+      // increase thebrightness of the images:
+    let images = document.querySelectorAll("img.dark");
+    images.forEach((image) => {
+      image.style.cssText = `filter: brightness(1);`;
+    });
+
   } 
   if (input.checked === false) {
-    console.log("checkbox checked");
-    document.styleSheets[1].cssRules[0].style.setProperty("--white-clr", "#fff");
+    console.log("checked");
+    // sunIcon.style.cssText = `display: block;`;
+    // moonIcon.style.cssText = `display: none;`;
+    document.styleSheets[1].cssRules[1].style.setProperty("--white-clr", "#292b2e");
+    document.styleSheets[1].cssRules[1].style.setProperty("--nav-clr", "#cacaca");
+    document.styleSheets[1].cssRules[1].style.setProperty("--independence-clr", "#cdcfd2");
+    document.styleSheets[1].cssRules[1].style.setProperty("--independence-clr-1", "#e3796a");
+    document.styleSheets[1].cssRules[1].style.setProperty("--black-coral-clr", "#e2e3e7");
+    document.styleSheets[1].cssRules[1].style.setProperty("--wild-blue-yonder-clr", "#e2e3e7");
+    document.styleSheets[1].cssRules[1].style.setProperty("--primary-dark-clr", "#86786b");
+    document.styleSheets[1].cssRules[1].style.setProperty("--space-cadet-clr", "#84a0ef");
+    document.styleSheets[1].cssRules[1].style.setProperty("--denim-clr", "#082D53");
+    document.styleSheets[1].cssRules[1].style.setProperty("--mantis-clr", "#537c42");
+    document.styleSheets[1].cssRules[1].style.setProperty("--orange-yellow-crayola-clr", "#997e36");
+    document.styleSheets[1].cssRules[1].style.setProperty("--royal-purple-clr", "#382958");
+    document.styleSheets[1].cssRules[1].style.setProperty("--cultured-clr-1", "#6D6054");
+    document.styleSheets[1].cssRules[1].style.setProperty("--onyx-clr", "#A5A5B7");
+
+
+
+    // dicrease thebrightness of the images:
+    let images = document.querySelectorAll("img.dark");
+    images.forEach((image) => {
+      image.style.cssText = `filter: brightness(0.7);`;
+    });
   }
 });
+
+
+
+
+
+
+
+
+
+
+
 
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");

@@ -27,9 +27,9 @@
   --sunglow-clr: #ffd24d;
   --orange-yellow-crayola-clr: #fdd365;
   --black-clr: #000;
-  --onyx-clr: #33383A;
+  --onyx-clr: #868686;
   --silver-clr: #C2C2C2;
-  --davys-grey-clr: #4B5254;
+  --davys-grey-clr: #757575;
   --eerie-black-clr-2: #222;
   --eerie-black-clr: #1C2124;
   --black-coral-clr: #646573;
@@ -207,10 +207,47 @@ Home page:
 --- Project's sections' Table --- */
 /* --- Problems in the project ---
 
->> can't open the navbar on hover and close it on mouse leave!
->> the navbar on mobile device is not responsive!
+<--> 1. The Home page
+
+1.1 >> light mood:
+A. On laptop devices:
+
+>> can't create the animation for the navbar on hover! when it comes from the left and opacity becomes 1.
+>> the light dark mode is not working!
 >> can't create the video animation as it should!
->> the video player on rotate in about us section is broken!
+>> the current page's link is not being active bc the refresh besides the home page!
+>> create a slider using a library for piramit ofic images and create the animation...
+
+
+B. On phone devices:
+
+>> the navbar is not responsive, it doesn't scroll!
+>> the sub nav should has bullets!
+>> the icons (whatsapp, phone number and light dark mood) are broken
+>> how to stop scrolling the page when the nav is open?
+>>
+
+1.2 >> dark mood:
+
+A. On laptop devices:
+>> fix the landing images in all the pages!
+>> currect the color in the slider title and "devami"
+>> currect the color in the footer title
+>> 
+
+B. On phone devices:
+>> 
+>> 
+>> 
+
+
+
+<--> 2. The blog page
+
+
+
+
+
 
 --- End of Problems in the project ---*/
 /* --- Start Global Rules ---*/
@@ -499,9 +536,6 @@ header .aside-menu .header .close-btn {
   height: 2rem;
   cursor: pointer;
 }
-header .aside-menu .header .close-btn:hover::after, header .aside-menu .header .close-btn:hover::before {
-  background-color: var(--imperial-red-clr);
-}
 header .aside-menu .header .close-btn:before, header .aside-menu .header .close-btn:after {
   content: "";
   position: absolute;
@@ -510,7 +544,7 @@ header .aside-menu .header .close-btn:before, header .aside-menu .header .close-
   height: 2px;
   transition: 0.5s;
   transform-origin: center center;
-  background-color: var(--black-clr);
+  background-color: var(--imperial-red-clr);
 }
 header .aside-menu .header .close-btn:before {
   transform: rotate(45deg);
@@ -536,6 +570,12 @@ header .aside-menu .navbar {
 }
 header .aside-menu .navbar .nav-item {
   display: block;
+}
+header .aside-menu .navbar .nav-item:hover .sub-navbar {
+  display: block !important;
+}
+header .aside-menu .navbar .nav-item:hover .arrow {
+  transform: rotate(90deg);
 }
 header .aside-menu .navbar .nav-item .nav-link {
   display: block;
@@ -580,12 +620,18 @@ header .aside-menu .navbar .nav-item .mega-menu svg {
 header .aside-menu .navbar .sub-navbar {
   display: none;
   transition: 0.5s;
+  list-style-type: disc !important;
 }
 header .aside-menu .navbar .sub-navbar.active {
   display: block;
 }
 header .aside-menu .navbar .sub-navbar .sub-nav-item {
   display: block;
+}
+@media (min-width: 992px) {
+  header .aside-menu .navbar .sub-navbar .sub-nav-item {
+    background-color: var(--gainsboro-clr);
+  }
 }
 header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   display: block;
@@ -594,8 +640,8 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
   font-weight: normal;
   text-transform: capitalize;
   transition: 0.5s;
-  border-left: 3px solid var(--wild-blue-yonder-clr);
   padding: 1.25rem 3.125rem;
+  border-left: 3px solid var(--wild-blue-yonder-clr);
   color: var(--black-clr);
 }
 header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover, header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link.active {
@@ -605,7 +651,6 @@ header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link:hover, header
 }
 @media (min-width: 992px) {
   header .aside-menu .navbar .sub-navbar .sub-nav-item .sub-nav-link {
-    background-color: var(--gainsboro-clr);
     padding: 0.625rem;
   }
 }
@@ -632,13 +677,12 @@ header #theme-swicher {
   border-radius: 5px;
   background-color: #00000091;
 }
-header #theme-swicher .fa-sun {
+header #theme-swicher .fa-sun, header #theme-swicher .fa-moon {
   cursor: pointer;
   color: #dfa620;
 }
 header #theme-swicher .fa-moon {
-  cursor: pointer;
-  color: #dfa620;
+  display: none;
 }
 header #theme-swicher input {
   -webkit-appearance: none;
@@ -1286,7 +1330,7 @@ img.the-end-bg {
   .about-us .container::before {
     content: "";
     position: absolute;
-    top: 90px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
@@ -1333,9 +1377,24 @@ img.the-end-bg {
   }
 }
 .about-us .time-line .time-line-item .img-holder span {
-  font-size: 5.25rem;
+  font-size: 4rem;
   letter-spacing: 3px;
   color: var(--transparent-white-clr);
+}
+@media (min-width: 576px) {
+  .about-us .time-line .time-line-item .img-holder span {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .about-us .time-line .time-line-item .img-holder span {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-us .time-line .time-line-item .img-holder span {
+    font-size: 5rem;
+  }
 }
 .about-us .time-line .time-line-item > span {
   position: relative;
@@ -2113,8 +2172,8 @@ footer h4 {
   text-transform: capitalize;
   margin-bottom: 1.25rem;
   color: var(--onyx-clr);
-  border-top: 2px solid var(--onyx-clr);
-  border-bottom: 2px solid var(--onyx-clr);
+  border-top: 2px solid var(--davys-grey-clr);
+  border-bottom: 2px solid var(--davys-grey-clr);
 }
 footer .social-media {
   padding-bottom: 3.125rem;
@@ -2153,7 +2212,7 @@ footer .contact-info div p {
   max-width: 430px;
 }
 footer .contact-info div a:hover {
-  color: var(--denim-clr) !important;
+  color: var(--orange-yellow-crayola-clr) !important;
   text-decoration: underline;
 }
 footer .blogs a {
@@ -2161,7 +2220,7 @@ footer .blogs a {
   min-height: 50px;
 }
 footer .blogs a:not(:last-child) {
-  border-bottom: 2px solid var(--onyx-clr);
+  border-bottom: 2px solid var(--davys-grey-clr);
 }
 footer .blogs a img {
   float: left;
@@ -2174,7 +2233,7 @@ footer .blogs a span {
   color: var(--davys-grey-clr);
 }
 footer .blogs a:hover span {
-  color: var(--denim-clr);
+  color: var(--orange-yellow-crayola-clr) !important;
 }
 footer .copyright {
   position: relative;
@@ -2207,7 +2266,7 @@ footer .blogs::before {
     left: -20px;
     width: 2px;
     height: 72%;
-    background-color: var(--onyx-clr);
+    background-color: var(--davys-grey-clr);
   }
   footer .contact-info::after, footer .blogs::after,
 footer .contact-info div:last-of-type::after, footer .blogs div::after {
@@ -2218,7 +2277,7 @@ footer .contact-info div:last-of-type::after, footer .blogs div::after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--onyx-clr);
+    background-color: var(--davys-grey-clr);
   }
   footer .contact-info div:last-of-type::after,
 footer .blogs div::after {
