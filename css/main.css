@@ -5,6 +5,7 @@
   --light-clr: #fff;
   --white-clr: #fff;
   --cultured-clr: #F0F4F5;
+  --sonic-silver: #F0F4F5;
   --umber-clr: #F0F4F5;
   /* Colorful colors */
   --denim-clr: #0059B2;
@@ -28,6 +29,7 @@
   :root {
     --white-clr: #292b2e;
     --umber-clr: #6d6054;
+    --sonic-silver: #737373;
     --independence-clr: #e3796a;
     --primary-dark-clr: #AA825A;
     --davys-grey-clr: #F0F4F5;
@@ -171,6 +173,7 @@
 .dark {
   --white-clr: #292b2e ;
   --umber-clr: #6d6054;
+  --sonic-silver: #737373;
   --independence-clr: #e3796a;
   --primary-dark-clr: #AA825A;
   --davys-grey-clr: #F0F4F5;
@@ -304,17 +307,17 @@ Home page:
 A. On laptop devices:
 
 >> can't create the animation for the navbar on hover! when it comes from the left and opacity becomes 1.
->> the light dark mode is not working!
 >> can't create the video animation as it should!
 >> the current page's link is not being active bc the refresh besides the home page!
 >> create a slider using a library for piramit ofic images and create the animation...
+>> use "for loop" in referanslar page for creating the "126" images...
 
 
 B. On phone devices:
 
 >> the navbar is not responsive, it doesn't scroll!
 >> the sub nav should has bullets!
->> the icons (whatsapp, phone number and light dark mood) are broken
+>> the icons whatsapp and phone number are broken
 >> how to stop scrolling the page when the nav is open?
 >>
 
@@ -322,21 +325,12 @@ B. On phone devices:
 
 A. On laptop devices:
 >> fix the landing images in all the pages!
->> currect the color in the slider title and "devami"
 >> when the device's mood dark the theme swicher doesn't work!
 
 B. On phone devices:
 >> 
->> 
->> 
-
 
 <--> 2. The blog page
-
-
-
-
-
 
 --- End of Problems in the project ---*/
 /* --- Start Global Rules ---*/
@@ -488,7 +482,7 @@ a:visited {
   height: 5px;
   transition: 0.5s;
   border-radius: 5px;
-  background-color: var(--silver-clr);
+  background-color: var(--davys-grey-clr);
 }
 
 .about-us h2,
@@ -2228,7 +2222,7 @@ Referanslar sayfasının başlangıcı
   background-color: var(--white-clr);
 }
 .referanslar .our-work .content {
-  background-color: var(--cultured-clr);
+  background-color: var(--sonic-silver);
 }
 .referanslar .our-work .container {
   display: grid;
@@ -2310,8 +2304,9 @@ footer .contact-info div svg {
   font-size: 25px;
   padding-right: 15px;
 }
-footer .contact-info div p {
+footer .contact-info div a {
   max-width: 430px;
+  color: var(--transparent-white-clr);
 }
 footer .contact-info div a:hover {
   color: var(--primary-light-clr) !important;

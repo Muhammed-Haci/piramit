@@ -20,7 +20,6 @@ closeBtn.addEventListener("click", function () {
   document.querySelector(".overlay").remove();
 });
 
-
 // --- remove class function ---:
 function removeActiveClass(e) {
   e.forEach((item) => item.classList.remove("active"));
@@ -66,6 +65,10 @@ SubNavLinks.forEach((link) => {
 
 
 
+
+
+
+
 // --- Toggle dark light mood ---:
 
 // Get the variables:
@@ -73,16 +76,13 @@ let themeSwicher = document.querySelector("#theme-swicher");
 let themeIcon = document.querySelector("#theme-swicher .icon");
 let localData = localStorage.getItem("theme");
 
-
 // check the localStorage Theme:
 if (localData == "light") {
   themeIcon.src = "images/moon.png";
   document.body.classList.remove("dark");
-  
-} else if (localData == "dark"){
+} else if (localData == "dark") {
   themeIcon.src = "images/sun.png";
   document.body.classList.add("dark");
-
 }
 
 // Change The Theme function:
@@ -97,17 +97,23 @@ themeSwicher.addEventListener("click", () => {
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-on.mp3";
     audio.play();
-    
   } else {
     themeIcon.src = "images/moon.png";
     localStorage.setItem("theme", "light");
-    
+
     // add the audio to the body:
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-off.mp3";
     audio.play();
   }
 });
+
+
+
+
+
+
+
 
 
 
@@ -197,11 +203,11 @@ window.addEventListener("scroll", function () {
 });
 
 window.addEventListener("scroll", function () {
-    if (window.scrollY >= services.offsetTop - 250) {
-      h2.style.setProperty("--before-width", "100%");
-    } else {
-      h2.style.setProperty("--before-width", "50px");
-    }
+  if (window.scrollY >= services.offsetTop - 250) {
+    h2.style.setProperty("--before-width", "100%");
+  } else {
+    h2.style.setProperty("--before-width", "50px");
+  }
 });
 
 //  --- Slider ---:
