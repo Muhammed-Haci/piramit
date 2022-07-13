@@ -44,43 +44,94 @@ SubNavLinks.forEach((link) => {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --- Toggle dark light mood ---:
 
+// Get the variables:
 let themeSwicher = document.querySelector("#theme-swicher");
 let themeIcon = document.querySelector("#theme-swicher .icon");
 let localData = localStorage.getItem("theme");
 
-// check if the localStorage has Theme:
-if (localData = "darkTheme") {
-  themeIcon.src = "images/sun.png";
-  document.body.classList.add("darkTheme");
-} else if ((localData = "lightTheme")) {
+
+// check the localStorage Theme:
+if (localData == "light") {
   themeIcon.src = "images/moon.png";
-  document.body.classList.remove("darkTheme");
+  document.body.classList.remove("dark");
+  
+} else if (localData == "dark"){
+  themeIcon.src = "images/sun.png";
+  document.body.classList.add("dark");
+
 }
 
-// Change Theme function:
+// Change The Theme function:
 themeSwicher.addEventListener("click", () => {
-  document.body.classList.toggle("darkTheme");
+  document.body.classList.toggle("dark");
 
-  if (document.body.classList.contains("darkTheme")) {
+  if (document.body.classList.contains("dark")) {
     themeIcon.src = "images/sun.png";
-    localStorage.setItem("theme", "darkTheme");
+    localStorage.setItem("theme", "dark");
 
     // add the audio to the body:
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-on.mp3";
     audio.play();
+    
   } else {
     themeIcon.src = "images/moon.png";
-    localStorage.setItem("theme", "lightTheme");
-
+    localStorage.setItem("theme", "light");
+    
     // add the audio to the body:
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-off.mp3";
     audio.play();
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");

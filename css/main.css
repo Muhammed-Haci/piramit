@@ -168,7 +168,7 @@
   }
 }
 /* Changing the theme using the body class */
-.darkTheme {
+.dark {
   --white-clr: #292b2e ;
   --umber-clr: #6d6054;
   --independence-clr: #e3796a;
@@ -178,107 +178,107 @@
   --mantis-clr: #537c42;
   --royal-purple-clr: #382958;
 }
-.darkTheme img.dark {
+.dark img.dark {
   filter: brightness(75%);
 }
-.darkTheme .landing.home {
+.dark .landing.home {
   background-image: url("../images/mobile-landing-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.home {
+  .dark .landing.home {
     background-image: url("../images/landing-dark.png") !important;
   }
 }
-.darkTheme .landing.webtasarim {
+.dark .landing.webtasarim {
   background-image: url("../images/webtasarim-landing-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.webtasarim {
+  .dark .landing.webtasarim {
     background-image: url("../images/webtasarim-bg-dark.png") !important;
   }
 }
-.darkTheme .landing.webyazilim {
+.dark .landing.webyazilim {
   background-image: url("../images/webyazilimbg-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.webyazilim {
+  .dark .landing.webyazilim {
     background-image: url("../images/webyazilim-dark.png") !important;
   }
 }
-.darkTheme .landing.eticaret {
+.dark .landing.eticaret {
   background-image: url("../images/eticaretbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.eticaret {
+  .dark .landing.eticaret {
     background-image: url("../images/eticaretbg-dark.png") !important;
   }
 }
-.darkTheme .landing.markatescil {
+.dark .landing.markatescil {
   background-image: url("../images/markatescilbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.markatescil {
+  .dark .landing.markatescil {
     background-image: url("../images/markatescilbg-dark.png") !important;
   }
 }
-.darkTheme .landing.sanaltur {
+.dark .landing.sanaltur {
   background-image: url("../images/sanalturbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.sanaltur {
+  .dark .landing.sanaltur {
     background-image: url("../images/sanalturbg-dark.png") !important;
   }
 }
-.darkTheme .landing.onlinecrm {
+.dark .landing.onlinecrm {
   background-image: url("../images/crmbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.onlinecrm {
+  .dark .landing.onlinecrm {
     background-image: url("../images/crmbg-dark.png") !important;
   }
 }
-.darkTheme .landing.sosyalmedya {
+.dark .landing.sosyalmedya {
   background-image: url("../images/sosyalmedyabg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.sosyalmedya {
+  .dark .landing.sosyalmedya {
     background-image: url("../images/sosyalmedyabg-dark.png") !important;
   }
 }
-.darkTheme .landing.hakkimizda {
+.dark .landing.hakkimizda {
   background-image: url("../images/hakkimizdabg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.hakkimizda {
+  .dark .landing.hakkimizda {
     background-image: url("../images/hakkimizdabg-dark.png") !important;
   }
 }
-.darkTheme .landing.nedenpiramit {
+.dark .landing.nedenpiramit {
   background-image: url("../images/nedenbiz2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .darkTheme .landing.nedenpiramit {
+  .dark .landing.nedenpiramit {
     background-image: url("../images/nedenbiz-dark.png") !important;
   }
 }
 @media (min-width: 992px) {
-  .darkTheme .contact {
+  .dark .contact {
     background-image: url("../images/contact-bg-dark.png") !important;
   }
 }
-.darkTheme .video {
+.dark .video {
   background-image: url("../images/video-bg-dark.png") !important;
 }
-.darkTheme .video img.question {
+.dark .video img.question {
   filter: invert(0.8);
 }
-.darkTheme .office .curly-bg:first-child {
+.dark .office .curly-bg:first-child {
   background-image: url("../images/curly-bg-1-dark.png") !important;
 }
-.darkTheme .office .curly-bg:last-child {
+.dark .office .curly-bg:last-child {
   background-image: url("../images/curly-bg-2-dark.png") !important;
 }
-.darkTheme .initiatives {
+.dark .initiatives {
   background-image: url("../images/initiatives-bg-dark.png") !important;
 }
 
