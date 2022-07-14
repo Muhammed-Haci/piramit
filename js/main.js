@@ -97,6 +97,7 @@ themeSwicher.addEventListener("click", () => {
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-on.mp3";
     audio.play();
+    audio.remove();
   } else {
     themeIcon.src = "images/moon.png";
     localStorage.setItem("theme", "light");
@@ -105,6 +106,7 @@ themeSwicher.addEventListener("click", () => {
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-off.mp3";
     audio.play();
+    audio.remove();
   }
 });
 

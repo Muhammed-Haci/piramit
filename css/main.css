@@ -170,7 +170,7 @@
   }
 }
 /* Changing the theme using the body class */
-.dark {
+body.dark {
   --white-clr: #292b2e ;
   --umber-clr: #6d6054;
   --sonic-silver: #737373;
@@ -181,107 +181,107 @@
   --mantis-clr: #537c42;
   --royal-purple-clr: #382958;
 }
-.dark img.dark {
+body.dark img.dark {
   filter: brightness(75%);
 }
-.dark .landing.home {
+body.dark .landing.home {
   background-image: url("../images/mobile-landing-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.home {
+  body.dark .landing.home {
     background-image: url("../images/landing-dark.png") !important;
   }
 }
-.dark .landing.webtasarim {
+body.dark .landing.webtasarim {
   background-image: url("../images/webtasarim-landing-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.webtasarim {
+  body.dark .landing.webtasarim {
     background-image: url("../images/webtasarim-bg-dark.png") !important;
   }
 }
-.dark .landing.webyazilim {
+body.dark .landing.webyazilim {
   background-image: url("../images/webyazilimbg-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.webyazilim {
+  body.dark .landing.webyazilim {
     background-image: url("../images/webyazilim-dark.png") !important;
   }
 }
-.dark .landing.eticaret {
+body.dark .landing.eticaret {
   background-image: url("../images/eticaretbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.eticaret {
+  body.dark .landing.eticaret {
     background-image: url("../images/eticaretbg-dark.png") !important;
   }
 }
-.dark .landing.markatescil {
+body.dark .landing.markatescil {
   background-image: url("../images/markatescilbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.markatescil {
+  body.dark .landing.markatescil {
     background-image: url("../images/markatescilbg-dark.png") !important;
   }
 }
-.dark .landing.sanaltur {
+body.dark .landing.sanaltur {
   background-image: url("../images/sanalturbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.sanaltur {
+  body.dark .landing.sanaltur {
     background-image: url("../images/sanalturbg-dark.png") !important;
   }
 }
-.dark .landing.onlinecrm {
+body.dark .landing.onlinecrm {
   background-image: url("../images/crmbg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.onlinecrm {
+  body.dark .landing.onlinecrm {
     background-image: url("../images/crmbg-dark.png") !important;
   }
 }
-.dark .landing.sosyalmedya {
+body.dark .landing.sosyalmedya {
   background-image: url("../images/sosyalmedyabg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.sosyalmedya {
+  body.dark .landing.sosyalmedya {
     background-image: url("../images/sosyalmedyabg-dark.png") !important;
   }
 }
-.dark .landing.hakkimizda {
+body.dark .landing.hakkimizda {
   background-image: url("../images/hakkimizdabg2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.hakkimizda {
+  body.dark .landing.hakkimizda {
     background-image: url("../images/hakkimizdabg-dark.png") !important;
   }
 }
-.dark .landing.nedenpiramit {
+body.dark .landing.nedenpiramit {
   background-image: url("../images/nedenbiz2-dark.png") !important;
 }
 @media (min-width: 992px) {
-  .dark .landing.nedenpiramit {
+  body.dark .landing.nedenpiramit {
     background-image: url("../images/nedenbiz-dark.png") !important;
   }
 }
 @media (min-width: 992px) {
-  .dark .contact {
+  body.dark .contact {
     background-image: url("../images/contact-bg-dark.png") !important;
   }
 }
-.dark .video {
+body.dark .video {
   background-image: url("../images/video-bg-dark.png") !important;
 }
-.dark .video img.question {
+body.dark .video img.question {
   filter: invert(0.8);
 }
-.dark .office .curly-bg:first-child {
+body.dark .office .curly-bg:first-child {
   background-image: url("../images/curly-bg-1-dark.png") !important;
 }
-.dark .office .curly-bg:last-child {
+body.dark .office .curly-bg:last-child {
   background-image: url("../images/curly-bg-2-dark.png") !important;
 }
-.dark .initiatives {
+body.dark .initiatives {
   background-image: url("../images/initiatives-bg-dark.png") !important;
 }
 
