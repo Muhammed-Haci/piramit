@@ -43,32 +43,6 @@ SubNavLinks.forEach((link) => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // --- Toggle dark light mood ---:
 
 // Get the variables:
@@ -77,22 +51,20 @@ let themeIcon = document.querySelector("#theme-swicher .icon");
 let localData = localStorage.getItem("theme");
 
 // check the localStorage Theme:
-if (localData == "light") {
-  themeIcon.src = "images/moon.png";
-  document.body.classList.remove("dark");
-} else if (localData == "dark") {
-  themeIcon.src = "images/sun.png";
-  document.body.classList.add("dark");
-}
+if (localData) {
+  localData == "light" ? themeIcon.src = "images/moon.png" : themeIcon.src = "images/sun.png" ;
+  document.body.classList.add(localData);
+} 
 
 // Change The Theme function:
 themeSwicher.addEventListener("click", () => {
+
   document.body.classList.toggle("dark");
 
   if (document.body.classList.contains("dark")) {
     themeIcon.src = "images/sun.png";
     localStorage.setItem("theme", "dark");
-
+    document.body.classList.remove("light");
     // add the audio to the body:
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-on.mp3";
@@ -100,8 +72,8 @@ themeSwicher.addEventListener("click", () => {
     audio.remove();
   } else {
     themeIcon.src = "images/moon.png";
+    document.body.classList.add("light");
     localStorage.setItem("theme", "light");
-
     // add the audio to the body:
     const audio = document.createElement("audio");
     audio.src = "audio/audio_light-off.mp3";
@@ -109,41 +81,6 @@ themeSwicher.addEventListener("click", () => {
     audio.remove();
   }
 });
-
-// Add the copyright year to the footer:
-let year = document.querySelector("footer .copyright .year");
-year.innerHTML = new Date().getFullYear();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // --- play the video ---:
 let videoSection = document.querySelector(".video .container");
@@ -285,4 +222,9 @@ slider.addEventListener("mouseover", () => {
 slider.addEventListener("mouseout", () => {
   repeater = setInterval(clickNext, 5000);
 });
+
+
+// Add the copyright year to the footer:
+let year = document.querySelector("footer .copyright .year");
+year.innerHTML = new Date().getFullYear();
 //# sourceMappingURL=main.js.map

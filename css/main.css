@@ -169,7 +169,7 @@
     background-image: url("../images/initiatives-bg-dark.png") !important;
   }
 }
-/* Changing the theme using the body class */
+/* Changing the theme using the body classes */
 body.dark {
   --white-clr: #292b2e ;
   --umber-clr: #6d6054;
@@ -283,6 +283,121 @@ body.dark .office .curly-bg:last-child {
 }
 body.dark .initiatives {
   background-image: url("../images/initiatives-bg-dark.png") !important;
+}
+
+body.light {
+  --white-clr: #fff;
+  --umber-clr: #F0F4F5;
+  --sonic-silver: #F0F4F5;
+  --independence-clr: #535362;
+  --primary-dark-clr: #FFB973;
+  --davys-grey-clr: #757575;
+  --denim-clr: #0059B2;
+  --mantis-clr: #25D366;
+  --royal-purple-clr: #7555B7;
+}
+body.light img.dark {
+  filter: brightness(100%);
+}
+body.light .landing.home {
+  background-image: url("../images/mobile-landing.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.home {
+    background-image: url("../images/landing.png") !important;
+  }
+}
+body.light .landing.webtasarim {
+  background-image: url("../images/webtasarim-landing.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.webtasarim {
+    background-image: url("../images/webtasarim-bg.png") !important;
+  }
+}
+body.light .landing.webyazilim {
+  background-image: url("../images/webyazilimbg.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.webyazilim {
+    background-image: url("../images/webyazilim.png") !important;
+  }
+}
+body.light .landing.eticaret {
+  background-image: url("../images/eticaretbg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.eticaret {
+    background-image: url("../images/eticaretbg.png") !important;
+  }
+}
+body.light .landing.markatescil {
+  background-image: url("../images/markatescilbg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.markatescil {
+    background-image: url("../images/markatescilbg.png") !important;
+  }
+}
+body.light .landing.sanaltur {
+  background-image: url("../images/sanalturbg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.sanaltur {
+    background-image: url("../images/sanalturbg.png") !important;
+  }
+}
+body.light .landing.onlinecrm {
+  background-image: url("../images/crmbg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.onlinecrm {
+    background-image: url("../images/crmbg.png") !important;
+  }
+}
+body.light .landing.sosyalmedya {
+  background-image: url("../images/sosyalmedyabg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.sosyalmedya {
+    background-image: url("../images/sosyalmedyabg.png") !important;
+  }
+}
+body.light .landing.hakkimizda {
+  background-image: url("../images/hakkimizdabg2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.hakkimizda {
+    background-image: url("../images/hakkimizdabg.png") !important;
+  }
+}
+body.light .landing.nedenpiramit {
+  background-image: url("../images/nedenbiz2.png") !important;
+}
+@media (min-width: 992px) {
+  body.light .landing.nedenpiramit {
+    background-image: url("../images/nedenbiz.png") !important;
+  }
+}
+@media (min-width: 992px) {
+  body.light .contact {
+    background-image: url("../images/contact-bg.png") !important;
+  }
+}
+body.light .video {
+  background-image: url("../images/video-bg.png") !important;
+}
+body.light .video img.question {
+  filter: invert(0.8);
+}
+body.light .office .curly-bg:first-child {
+  background-image: url("../images/curly-bg-1.png") !important;
+}
+body.light .office .curly-bg:last-child {
+  background-image: url("../images/curly-bg-2.png") !important;
+}
+body.light .initiatives {
+  background-image: url("../images/initiatives-bg.png") !important;
 }
 
 /* --- End Project's colors --- */
