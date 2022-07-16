@@ -110,6 +110,10 @@ themeSwicher.addEventListener("click", () => {
   }
 });
 
+// Add the copyright year to the footer:
+let year = document.querySelector("footer .copyright .year");
+year.innerHTML = new Date().getFullYear();
+
 
 
 
