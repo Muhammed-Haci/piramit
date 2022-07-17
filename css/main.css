@@ -388,7 +388,7 @@ body.light .video {
   background-image: url("../images/video-bg.png") !important;
 }
 body.light .video img.question {
-  filter: invert(0.8);
+  filter: invert(0);
 }
 body.light .office .curly-bg:first-child {
   background-image: url("../images/curly-bg-1.png") !important;
@@ -428,7 +428,7 @@ A. On laptop devices:
 >> use "for loop" in referanslar page for creating the "126" images...
 
 
-B. On phone devices:
+B. On mobile devices:
 
 >> the navbar is not responsive, it doesn't scroll!
 >> the sub nav should has bullets!
@@ -440,7 +440,6 @@ B. On phone devices:
 
 A. On laptop devices:
 >> fix the landing images in all the pages!
->> when the device's mood dark the theme swicher doesn't work!
 
 B. On phone devices:
 >> 
@@ -1404,7 +1403,7 @@ img.the-end-bg {
   position: absolute;
   width: 50px;
   height: 50px;
-  z-index: 1;
+  z-index: -1;
   cursor: pointer;
   border-radius: 50%;
   -webkit-animation: pulse 3s infinite;
