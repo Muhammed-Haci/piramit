@@ -224,7 +224,14 @@ slider.addEventListener("mouseout", () => {
 });
 
 
+
+// adding the preloading icon:
+let preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => preloader.style.display = "none" )
+
 // Add the copyright year to the footer:
 let year = document.querySelector("footer .copyright .year");
 year.innerHTML = new Date().getFullYear();
+
 //# sourceMappingURL=main.js.map
